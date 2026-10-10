@@ -1,0 +1,184 @@
+diff --git a/wCoefNet/Codes/test.py b/wCoefNet/Codes/test.py
+index 29c2383..14c1d26 100644
+--- a/wCoefNet/Codes/test.py
++++ b/wCoefNet/Codes/test.py
+@@ -14,6 +14,7 @@ from skimage.metrics import peak_signal_noise_ratio as compare_psnr
+ import grid_res
+ import random
+ import torch.backends.cudnn as cudnn
++import csv
+ 
+ def setup_seed(seed):
+     torch.manual_seed(seed)
+@@ -242,6 +243,7 @@ def test(args):
+ 
+     ssim3_list = []
+     psnr3_list = []
++    per_sample_metrics = []
+     net.eval()
+     for i, batch_value in enumerate(test_loader):
+ 
+@@ -260,6 +262,14 @@ def test(args):
+         cv2.imwrite(path, best_img)
+         ssim3_list.append(best_ssim)
+         psnr3_list.append(best_psnr)
++        per_sample_metrics.append({
++            'sample_index': i + 1,
++            'filename': os.path.basename(test_data.datas['input1']['image'][i]),
++            'psnr': best_psnr,
++            'ssim': best_ssim,
++            'best_alpha': best_alpha,
++            'status': 'ok',
++        })
+ 
+ 
+         print('i = {}, best alpha = {}, best_ssim:{}'.format( i+1, best_alpha, best_ssim))
+@@ -283,6 +293,16 @@ def test(args):
+     print("top 30~60%", np.mean(ssim3_list_60))
+     print("top 60~100%", np.mean(ssim3_list_100))
+     print('average ssim:', np.mean(ssim3_list))
++
++    metrics_dir = os.path.dirname(os.path.abspath(args.metrics_csv))
++    if not os.path.exists(metrics_dir):
++        os.makedirs(metrics_dir)
++    with open(args.metrics_csv, 'w', newline='') as metrics_file:
++        fieldnames = ['sample_index', 'filename', 'psnr', 'ssim', 'best_alpha', 'status']
++        writer_csv = csv.DictWriter(metrics_file, fieldnames=fieldnames)
++        writer_csv.writeheader()
++        writer_csv.writerows(per_sample_metrics)
++    print('per-sample metrics:', os.path.abspath(args.metrics_csv))
+     print("##################end testing#######################")
+ 
+ 
+@@ -292,14 +312,15 @@ if __name__=="__main__":
+ 
+     parser = argparse.ArgumentParser()
+ 
+-    parser.add_argument('--gpu', type=str, default='0')
++    parser.add_argument('--gpu', type=str, default='3')
+     parser.add_argument('--batch_size', type=int, default=1)
+     parser.add_argument('--max_epoch', type=int, default=5)
+-    parser.add_argument('--woCoefNet_path', type=str, default='/home/my123/pyProjects/RopStitch_FinalCode/woCoefNet/model_homo/epoch100_model.pth')
++    parser.add_argument('--woCoefNet_path', type=str, default='/workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth')
+ 
+     # /opt/data/private/nl/Data/UDIS-D/testing/  or  /opt/data/private/nl/Data/UDIS-D/training/
+-    parser.add_argument('--test_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/testing/')
+-    parser.add_argument('--test_other_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/stitch_real/')
++    parser.add_argument('--test_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
++    parser.add_argument('--test_other_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/stitch_real/')
++    parser.add_argument('--metrics_csv', type=str, default='/workspace/python_pro/test1/RopStitch/experiments/reproduction/B0_official/per_sample_metrics.csv')
+ 
+ 
+     print('<==================== Loading data ===================>\n')
+diff --git a/wCoefNet/Codes/utils/torch_tps_transform.py b/wCoefNet/Codes/utils/torch_tps_transform.py
+index 00b1d87..5e23cb1 100644
+--- a/wCoefNet/Codes/utils/torch_tps_transform.py
++++ b/wCoefNet/Codes/utils/torch_tps_transform.py
+@@ -1,5 +1,6 @@
+ import torch
+ import numpy as np
++import os
+ 
+ # transforming an image (U) from target (control points) to source (control points)
+ # all the points should be normalized from -1 ~1
+@@ -124,6 +125,28 @@ def transformer(U, source, target, out_size):
+         #    grid = grid.cuda()
+         return grid
+ 
++    def _meshgrid_rows(height, width, row_start, row_end, source):
++        """Build the same TPS grid as _meshgrid, limited to whole output rows."""
++        device = source.device
++        dtype = source.dtype
++        # Match the official path: construct linspace on CPU, then copy to GPU.
++        x_line = torch.linspace(-1.0, 1.0, width, dtype=dtype).to(device)
++        y_line = torch.linspace(-1.0, 1.0, height, dtype=dtype).to(device)
++        rows = row_end - row_start
++
++        x_t_flat = x_line.unsqueeze(0).expand(rows, -1).reshape(1, 1, -1)
++        y_t_flat = y_line[row_start:row_end].unsqueeze(1).expand(-1, width).reshape(1, 1, -1)
++
++        num_batch = source.size(0)
++        px = source[:, :, 0].unsqueeze(2)
++        py = source[:, :, 1].unsqueeze(2)
++        d2 = torch.square(x_t_flat - px) + torch.square(y_t_flat - py)
++        r = d2 * torch.log(d2 + 1e-6)
++        x_t_flat = x_t_flat.expand(num_batch, -1, -1)
++        y_t_flat = y_t_flat.expand(num_batch, -1, -1)
++        ones = torch.ones_like(x_t_flat)
++        return torch.cat((ones, x_t_flat, y_t_flat, r), 1)
++
+     def _transform(T, source, input_dim, out_size):
+         num_batch, num_channels, height, width = input_dim.size()
+ 
+@@ -145,6 +168,32 @@ def transformer(U, source, target, out_size):
+         output = output.permute(0,3,1,2)
+         return output#, condition
+ 
++    def _transform_chunked(T, source, input_dim, out_size, chunk_rows):
++        """Memory-bounded equivalent of _transform; partitions only the output rows."""
++        num_batch, num_channels, _, _ = input_dim.size()
++        out_height = int(out_size[0])
++        out_width = int(out_size[1])
++        output_chunks = []
++
++        for row_start in range(0, out_height, chunk_rows):
++            row_end = min(row_start + chunk_rows, out_height)
++            rows = row_end - row_start
++            grid = _meshgrid_rows(
++                out_height, out_width, row_start, row_end, source
++            )
++            transformed_grid = torch.matmul(T, grid)
++            x_s = transformed_grid[:, 0, :].reshape(-1)
++            y_s = transformed_grid[:, 1, :].reshape(-1)
++            transformed = _interpolate(
++                input_dim, x_s, y_s, (rows, out_width)
++            )
++            transformed = transformed.reshape(
++                num_batch, rows, out_width, num_channels
++            )
++            output_chunks.append(transformed.permute(0, 3, 1, 2))
++
++        return torch.cat(output_chunks, dim=2)
++
+ 
+     def _solve_system(source, target):
+         num_batch  = source.size()[0]
+@@ -186,6 +235,16 @@ def transformer(U, source, target, out_size):
+ 
+     T = _solve_system(source, target)
+ 
+-    output = _transform(T, source, U, out_size)
++    out_height = int(out_size[0])
++    out_width = int(out_size[1])
++    chunk_threshold = int(os.environ.get("ROPSTITCH_TPS_CHUNK_THRESHOLD", "2000000"))
++    chunk_rows = int(os.environ.get("ROPSTITCH_TPS_CHUNK_ROWS", "128"))
++    if chunk_rows <= 0:
++        raise ValueError("ROPSTITCH_TPS_CHUNK_ROWS must be positive")
++
++    if out_height * out_width > chunk_threshold:
++        output = _transform_chunked(T, source, U, out_size, chunk_rows)
++    else:
++        output = _transform(T, source, U, out_size)
+ 
+-    return output
+\ No newline at end of file
++    return output
+diff --git a/woCoefNet/Codes/train.py b/woCoefNet/Codes/train.py
+index 661a020..beaf9ef 100644
+--- a/woCoefNet/Codes/train.py
++++ b/woCoefNet/Codes/train.py
+@@ -248,11 +248,11 @@ if __name__=="__main__":
+     parser = argparse.ArgumentParser()
+ 
+     # add arguments
+-    parser.add_argument('--gpu', type=str, default='0')
++    parser.add_argument('--gpu', type=str, default='3')
+     parser.add_argument('--batch_size', type=int, default=4)
+     parser.add_argument('--max_epoch', type=int, default=100)
+-    parser.add_argument('--train_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/training/')
+-    parser.add_argument('--test_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/testing/')
++    parser.add_argument('--train_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/training/')
++    parser.add_argument('--test_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
+ 
+     # parse the arguments
+     args = parser.parse_args()

@@ -1,0 +1,23 @@
+B0 OFFICIAL BASELINE TEST LOG ARCHIVE
+Date archived: 2026-10-10 Asia/Shanghai
+Status reported by operator: completed; aligned with paper Table I
+
+PSNR:
+top 30% (Easy): 29.921793
+top 30-60% (Moderate): 24.95519
+top 60-100% (Hard): 20.595434
+average psnr: 24.69902
+
+SSIM:
+top 30% (Easy): 0.92638874
+top 30-60% (Moderate): 0.84496814
+top 60-100% (Hard): 0.6717298
+average ssim: 0.8000622
+
+Observed during preliminary attempts:
+- One CUDA OOM occurred at stitch_real pair 122 in the original full-grid TPS implementation.
+- The final code uses numerically equivalent row-chunked TPS for outputs above 2,000,000 pixels.
+- Official messages `warp size is too huge None! pass this image.` occurred and the official fallback behavior was preserved.
+
+Archival limitation:
+The original successful process was not piped to a log file. This file preserves all recovered final output supplied by the operator, but cannot reconstruct omitted per-image console lines byte-for-byte after process exit.

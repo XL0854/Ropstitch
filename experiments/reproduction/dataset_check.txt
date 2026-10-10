@@ -1,0 +1,17 @@
+Recorded at: 2026-10-10T16:27:24+08:00
+Method: filename counts only; images were not decoded or traversed, as requested.
+
+train_path: /workspace/python_pro/test1/RopStitch/data/UDIS-D/training
+test_path: /workspace/python_pro/test1/RopStitch/data/UDIS-D/testing
+
+training/input1: 10440
+training/input2: 10440
+testing/input1: 1105
+testing/input2: 1106
+
+Expected training pairs: 10440
+Expected testing pairs: 1106
+Result: FAIL
+
+Filename comparison identified 000001.jpg in testing/input2 with no matching file in testing/input1.
+Training was stopped before smoke testing because the required testing count/pairing gate failed.

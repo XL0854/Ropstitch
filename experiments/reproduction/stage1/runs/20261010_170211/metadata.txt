@@ -1,0 +1,145 @@
+run_dir=/workspace/python_pro/test1/RopStitch/experiments/reproduction/stage1/runs/20261010_170211
+project_root=/workspace/python_pro/test1/RopStitch
+start_time=2026-10-10T17:02:11+08:00
+working_directory=/workspace/python_pro/test1/RopStitch/woCoefNet/Codes
+git_commit=c47a5aef88ec31abe1d1dc0f470b42dbacc904c1
+git_branch=reproduce-baseline
+conda_environment=ropstitch
+python_executable=/root/miniconda3/envs/ropstitch/bin/python
+sample_seconds=10
+command=python train.py 
+
+===== git status =====
+## reproduce-baseline
+ M woCoefNet/Codes/train.py
+?? data/
+?? experiments/
+?? woCoefNet/Codes/__pycache__/dataset.cpython-39.pyc
+?? woCoefNet/Codes/__pycache__/grid_res.cpython-39.pyc
+?? woCoefNet/Codes/__pycache__/loss.cpython-39.pyc
+?? woCoefNet/Codes/__pycache__/network.cpython-39.pyc
+?? woCoefNet/Codes/utils/__pycache__/torch_DLT.cpython-39.pyc
+?? woCoefNet/Codes/utils/__pycache__/torch_homo_transform.cpython-39.pyc
+?? woCoefNet/Codes/utils/__pycache__/torch_tps_transform.cpython-39.pyc
+?? woCoefNet/summary/
+
+===== git diff --stat =====
+ woCoefNet/Codes/train.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+===== git diff =====
+diff --git a/woCoefNet/Codes/train.py b/woCoefNet/Codes/train.py
+index 661a020..beaf9ef 100644
+--- a/woCoefNet/Codes/train.py
++++ b/woCoefNet/Codes/train.py
+@@ -248,11 +248,11 @@ if __name__=="__main__":
+     parser = argparse.ArgumentParser()
+ 
+     # add arguments
+-    parser.add_argument('--gpu', type=str, default='0')
++    parser.add_argument('--gpu', type=str, default='3')
+     parser.add_argument('--batch_size', type=int, default=4)
+     parser.add_argument('--max_epoch', type=int, default=100)
+-    parser.add_argument('--train_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/training/')
+-    parser.add_argument('--test_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/testing/')
++    parser.add_argument('--train_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/training/')
++    parser.add_argument('--test_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
+ 
+     # parse the arguments
+     args = parser.parse_args()
+
+===== Python packages =====
+OS: Linux-5.15.0-139-generic-x86_64-with-glibc2.31
+Python: 3.9.25 (main, Nov  3 2025, 22:33:05)  [GCC 11.2.0]
+Executable: /root/miniconda3/envs/ropstitch/bin/python
+Conda environment: ropstitch
+PyTorch: 2.8.0+cu128
+torchvision: 0.23.0+cu128
+scikit-image: 0.24.0
+OpenCV: 4.13.0
+NumPy: 2.0.1
+CUDA build: 12.8
+cuDNN: 91002
+CUDA available: True
+GPU count: 4
+GPU 0: NVIDIA GeForce RTX 4090
+GPU 0 total bytes: 25377767424
+GPU 0 free bytes at start: 3609133056
+GPU 1: NVIDIA GeForce RTX 4090
+GPU 1 total bytes: 25386352640
+GPU 1 free bytes at start: 2109865984
+GPU 2: NVIDIA GeForce RTX 4090
+GPU 2 total bytes: 25386352640
+GPU 2 free bytes at start: 6992035840
+GPU 3: NVIDIA GeForce RTX 4090
+GPU 3 total bytes: 25386352640
+GPU 3 free bytes at start: 24976752640
+
+===== nvidia-smi at start =====
+Sat Oct 10 17:02:15 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        Off |   00000000:2A:00.0 Off |                  Off |
+| 63%   56C    P2            120W /  450W |   20373MiB /  24564MiB |      4%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4090        Off |   00000000:3D:00.0 Off |                  Off |
+| 48%   55C    P2            212W /  450W |   21811MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 4090        Off |   00000000:99:00.0 Off |                  Off |
+| 52%   55C    P2            127W /  450W |   17155MiB /  24564MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 4090        Off |   00000000:BD:00.0 Off |                  Off |
+| 30%   42C    P0             48W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
++-----------------------------------------------------------------------------------------+
+
+===== nvidia-smi at end =====
+Sat Oct 10 17:03:10 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090        Off |   00000000:2A:00.0 Off |                  Off |
+| 57%   60C    P2            198W /  450W |   20373MiB /  24564MiB |     68%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4090        Off |   00000000:3D:00.0 Off |                  Off |
+| 49%   64C    P2            140W /  450W |   21811MiB /  24564MiB |     25%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 4090        Off |   00000000:99:00.0 Off |                  Off |
+| 52%   59C    P2            192W /  450W |   17155MiB /  24564MiB |     71%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 4090        Off |   00000000:BD:00.0 Off |                  Off |
+| 81%   63C    P0            167W /  450W |       1MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
++-----------------------------------------------------------------------------------------+
+
+end_time=2026-10-10T17:03:10+08:00
+exit_code=130

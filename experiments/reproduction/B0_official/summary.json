@@ -1,0 +1,29 @@
+{
+  "baseline": "B0_official",
+  "status": "paper_table_I_aligned",
+  "weights": "official_downloaded",
+  "seed": 114514,
+  "evaluated_udis_pairs": 1105,
+  "metrics": {
+    "psnr": {
+      "easy": 29.921793,
+      "moderate": 24.95519,
+      "hard": 20.595434,
+      "average": 24.69902
+    },
+    "ssim": {
+      "easy": 0.92638874,
+      "moderate": 0.84496814,
+      "hard": 0.6717298,
+      "average": 0.8000622
+    }
+  },
+  "difference_from_paper_at_reported_precision": {
+    "psnr": {"easy": 0.0, "moderate": 0.0, "hard": 0.0, "average": 0.0},
+    "ssim": {"easy": 0.0, "moderate": 0.0, "hard": 0.0, "average": 0.0}
+  },
+  "stage1_checkpoint": "/workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth",
+  "stage2_checkpoint": "/workspace/python_pro/test1/RopStitch/wCoefNet/model_coef/epoch050_coefmodel.pth",
+  "train_path": "/workspace/python_pro/test1/RopStitch/data/UDIS-D/training/",
+  "test_path": "/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/"
+}

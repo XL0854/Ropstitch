@@ -14,6 +14,7 @@ from skimage.metrics import peak_signal_noise_ratio as compare_psnr
 import grid_res
 import random
 import torch.backends.cudnn as cudnn
+import csv
 
 def setup_seed(seed):
     torch.manual_seed(seed)
@@ -242,6 +243,7 @@ def test(args):
 
     ssim3_list = []
     psnr3_list = []
+    per_sample_metrics = []
     net.eval()
     for i, batch_value in enumerate(test_loader):
 
@@ -260,6 +262,14 @@ def test(args):
         cv2.imwrite(path, best_img)
         ssim3_list.append(best_ssim)
         psnr3_list.append(best_psnr)
+        per_sample_metrics.append({
+            'sample_index': i + 1,
+            'filename': os.path.basename(test_data.datas['input1']['image'][i]),
+            'psnr': best_psnr,
+            'ssim': best_ssim,
+            'best_alpha': best_alpha,
+            'status': 'ok',
+        })
 
 
         print('i = {}, best alpha = {}, best_ssim:{}'.format( i+1, best_alpha, best_ssim))
@@ -283,6 +293,16 @@ def test(args):
     print("top 30~60%", np.mean(ssim3_list_60))
     print("top 60~100%", np.mean(ssim3_list_100))
     print('average ssim:', np.mean(ssim3_list))
+
+    metrics_dir = os.path.dirname(os.path.abspath(args.metrics_csv))
+    if not os.path.exists(metrics_dir):
+        os.makedirs(metrics_dir)
+    with open(args.metrics_csv, 'w', newline='') as metrics_file:
+        fieldnames = ['sample_index', 'filename', 'psnr', 'ssim', 'best_alpha', 'status']
+        writer_csv = csv.DictWriter(metrics_file, fieldnames=fieldnames)
+        writer_csv.writeheader()
+        writer_csv.writerows(per_sample_metrics)
+    print('per-sample metrics:', os.path.abspath(args.metrics_csv))
     print("##################end testing#######################")
 
 
@@ -292,14 +312,15 @@ if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--gpu', type=str, default='0')
+    parser.add_argument('--gpu', type=str, default='3')
     parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--max_epoch', type=int, default=5)
-    parser.add_argument('--woCoefNet_path', type=str, default='/home/my123/pyProjects/RopStitch_FinalCode/woCoefNet/model_homo/epoch100_model.pth')
+    parser.add_argument('--woCoefNet_path', type=str, default='/workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth')
 
     # /opt/data/private/nl/Data/UDIS-D/testing/  or  /opt/data/private/nl/Data/UDIS-D/training/
-    parser.add_argument('--test_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/testing/')
-    parser.add_argument('--test_other_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/stitch_real/')
+    parser.add_argument('--test_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
+    parser.add_argument('--test_other_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/stitch_real/')
+    parser.add_argument('--metrics_csv', type=str, default='/workspace/python_pro/test1/RopStitch/experiments/reproduction/B0_official/per_sample_metrics.csv')
 
 
     print('<==================== Loading data ===================>\n')

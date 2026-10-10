@@ -1,0 +1,10 @@
+Status: NOT RUN
+Timestamp: 2026-10-10T16:27:24+08:00
+
+The required data-count gate failed before smoke testing:
+- testing/input1: 1105
+- testing/input2: 1106
+- missing counterpart: testing/input1/000001.jpg
+
+CUDA was also unavailable: torch.cuda.is_available() returned False and nvidia-smi exited 9.
+Per the explicit stop condition, no forward pass, backward pass, optimizer step, checkpoint save/reload, or short epoch was attempted.

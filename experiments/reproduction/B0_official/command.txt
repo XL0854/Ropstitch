@@ -1,0 +1,13 @@
+Working directory:
+/workspace/python_pro/test1/RopStitch/wCoefNet/Codes
+
+Archived reproducible test command:
+CUDA_VISIBLE_DEVICES=3 ROPSTITCH_TPS_CHUNK_ROWS=128 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True python -B test.py --gpu 0 --batch_size 1 --max_epoch 5 --woCoefNet_path /workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth --test_path /workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/ --test_other_path /workspace/python_pro/test1/RopStitch/data/stitch_real/ --metrics_csv /workspace/python_pro/test1/RopStitch/experiments/reproduction/B0_official/per_sample_metrics.csv
+
+The coefficient checkpoint is selected by the unchanged official glob logic from:
+/workspace/python_pro/test1/RopStitch/wCoefNet/model_coef/*.pth
+
+Only one matching file existed:
+/workspace/python_pro/test1/RopStitch/wCoefNet/model_coef/epoch050_coefmodel.pth
+
+Random seed configured by test.py: 114514

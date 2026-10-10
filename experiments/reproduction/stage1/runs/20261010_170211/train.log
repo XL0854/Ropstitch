@@ -1,0 +1,247 @@
+/root/miniconda3/envs/ropstitch/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda3/envs/ropstitch/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+<==================== setting arguments ===================>
+
+Namespace(gpu='3', batch_size=4, max_epoch=100, train_path='/workspace/python_pro/test1/RopStitch/data/UDIS-D/training/', test_path='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
+odict_keys(['input1', 'input2'])
+odict_keys(['input1', 'input2'])
+training from stratch!
+-----------------
+model: Network(
+  (regressHomo_part1): Sequential(
+    (0): Conv2d(2, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (6): ReLU(inplace=True)
+    (7): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (11): ReLU(inplace=True)
+    (12): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (13): ReLU(inplace=True)
+    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (regressHomo_part2): Sequential(
+    (0): Linear(in_features=2048, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=512, out_features=128, bias=True)
+    (3): ReLU(inplace=True)
+    (4): Linear(in_features=128, out_features=8, bias=True)
+  )
+  (regressTPS_part1): Sequential(
+    (0): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): ReLU(inplace=True)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (3): ReLU(inplace=True)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (6): ReLU(inplace=True)
+    (7): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (8): ReLU(inplace=True)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (11): ReLU(inplace=True)
+    (12): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (13): ReLU(inplace=True)
+    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (15): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (16): ReLU(inplace=True)
+    (17): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (18): ReLU(inplace=True)
+    (19): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (regressTPS_part2): Sequential(
+    (0): Linear(in_features=2048, out_features=1024, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=1024, out_features=512, bias=True)
+    (3): ReLU(inplace=True)
+    (4): Linear(in_features=512, out_features=338, bias=True)
+  )
+  (fronzen_resnet_backbone): ResNetBackBone(
+    (feature_extractor_stage1): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      (4): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (5): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (feature_extractor_stage2): Sequential(
+      (0): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (active_resnet_backbone): ResNetBackBone(
+    (feature_extractor_stage1): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+      (4): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (5): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+    (feature_extractor_stage2): Sequential(
+      (0): Sequential(
+        (0): BasicBlock(
+          (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (downsample): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (1): BasicBlock(
+          (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+          (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+)
+-----------------
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.0.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.0.conv1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.0.bn1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.0.bn1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.0.conv2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.0.bn2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.0.bn2.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.1.conv1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.1.bn1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.1.bn1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.1.conv2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.1.bn2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.4.1.bn2.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.conv1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.bn1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.bn1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.conv2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.bn2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.bn2.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.downsample.0.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.downsample.1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.0.downsample.1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.1.conv1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.1.bn1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.1.bn1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.1.conv2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.1.bn2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage1.5.1.bn2.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.conv1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.bn1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.bn1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.conv2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.bn2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.bn2.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.downsample.0.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.downsample.1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.0.downsample.1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.1.conv1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.1.bn1.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.1.bn1.bias
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.1.conv2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.1.bn2.weight
+Frozen: fronzen_resnet_backbone.feature_extractor_stage2.0.1.bn2.bias
+##################start training#######################
+start epoch 0
+0 lr=0.000040

@@ -1,0 +1,27 @@
+Recorded at: 2026-10-10T16:27:24+08:00
+Project: /workspace/python_pro/test1/RopStitch
+
+OS: Linux dc91f2c3e5b6 5.15.0-139-generic #149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025 x86_64 GNU/Linux
+Python: 3.9.25 (main, Nov 3 2025, 22:33:05) [GCC 11.2.0]
+Python executable: /root/miniconda3/envs/ropstitch/bin/python
+Conda environment: ropstitch
+PyTorch: 2.8.0+cu128
+torchvision: 0.23.0+cu128
+CUDA build version: 12.8
+cuDNN: 91002
+scikit-image: 0.24.0
+OpenCV: 4.13.0
+NumPy: 2.0.1
+CUDA available: False
+GPU count visible to PyTorch: 0
+GPU model: unavailable (driver/NVML initialization failed)
+Total GPU memory: unavailable
+Current free GPU memory: unavailable
+
+nvidia-smi output (exit code 9):
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver.
+Make sure that the latest NVIDIA driver is installed and running.
+
+PyTorch CUDA warning:
+CUDA initialization failed in cudaGetDeviceCount with Error 304: OS call failed or operation not supported on this OS.
+NVML could not be initialized.

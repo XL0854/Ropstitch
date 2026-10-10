@@ -1,0 +1,23 @@
+B0 archive date: 2026-10-10 Asia/Shanghai
+OS: Linux 5.15.0-139-generic x86_64, glibc 2.31
+Python: 3.9.25
+Python executable: /root/miniconda3/envs/ropstitch/bin/python
+Conda environment: ropstitch
+PyTorch: 2.8.0+cu128
+torchvision: 0.23.0+cu128
+CUDA used by PyTorch build: 12.8
+cuDNN: 91002
+scikit-image: 0.24.0
+OpenCV: 4.13.0
+NumPy: 2.0.1
+NVIDIA driver: 550.144.03
+nvidia-smi CUDA capability: 12.4
+GPU count: 4
+GPU 0: NVIDIA GeForce RTX 4090, 25377767424 bytes
+GPU 1: NVIDIA GeForce RTX 4090, 25386352640 bytes
+GPU 2: NVIDIA GeForce RTX 4090, 25386352640 bytes
+GPU 3: NVIDIA GeForce RTX 4090, 25386352640 bytes
+Test GPU selection: CUDA_VISIBLE_DEVICES/default script selection corresponding to physical GPU 3
+
+GPU facts were recovered from the successful GPU-visible run metadata at:
+experiments/reproduction/stage1/runs/20261010_170211/metadata.txt

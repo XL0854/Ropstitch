@@ -1,0 +1,2 @@
+Status: NOT STARTED
+Reason: dataset count/pairing gate failed before smoke testing; CUDA unavailable.

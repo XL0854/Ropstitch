@@ -248,11 +248,11 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser()
 
     # add arguments
-    parser.add_argument('--gpu', type=str, default='0')
+    parser.add_argument('--gpu', type=str, default='3')
     parser.add_argument('--batch_size', type=int, default=4)
     parser.add_argument('--max_epoch', type=int, default=100)
-    parser.add_argument('--train_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/training/')
-    parser.add_argument('--test_path', type=str, default='/media/my123/0d52819b-6878-4445-b5be-37548de0a05d/pyProjects/StitchUDIS/UDIS-D/testing/')
+    parser.add_argument('--train_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/training/')
+    parser.add_argument('--test_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
 
     # parse the arguments
     args = parser.parse_args()

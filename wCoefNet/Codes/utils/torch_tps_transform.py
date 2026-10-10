@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+import os
 
 # transforming an image (U) from target (control points) to source (control points)
 # all the points should be normalized from -1 ~1
@@ -124,6 +125,28 @@ def transformer(U, source, target, out_size):
         #    grid = grid.cuda()
         return grid
 
+    def _meshgrid_rows(height, width, row_start, row_end, source):
+        """Build the same TPS grid as _meshgrid, limited to whole output rows."""
+        device = source.device
+        dtype = source.dtype
+        # Match the official path: construct linspace on CPU, then copy to GPU.
+        x_line = torch.linspace(-1.0, 1.0, width, dtype=dtype).to(device)
+        y_line = torch.linspace(-1.0, 1.0, height, dtype=dtype).to(device)
+        rows = row_end - row_start
+
+        x_t_flat = x_line.unsqueeze(0).expand(rows, -1).reshape(1, 1, -1)
+        y_t_flat = y_line[row_start:row_end].unsqueeze(1).expand(-1, width).reshape(1, 1, -1)
+
+        num_batch = source.size(0)
+        px = source[:, :, 0].unsqueeze(2)
+        py = source[:, :, 1].unsqueeze(2)
+        d2 = torch.square(x_t_flat - px) + torch.square(y_t_flat - py)
+        r = d2 * torch.log(d2 + 1e-6)
+        x_t_flat = x_t_flat.expand(num_batch, -1, -1)
+        y_t_flat = y_t_flat.expand(num_batch, -1, -1)
+        ones = torch.ones_like(x_t_flat)
+        return torch.cat((ones, x_t_flat, y_t_flat, r), 1)
+
     def _transform(T, source, input_dim, out_size):
         num_batch, num_channels, height, width = input_dim.size()
 
@@ -144,6 +167,32 @@ def transformer(U, source, target, out_size):
 
         output = output.permute(0,3,1,2)
         return output#, condition
+
+    def _transform_chunked(T, source, input_dim, out_size, chunk_rows):
+        """Memory-bounded equivalent of _transform; partitions only the output rows."""
+        num_batch, num_channels, _, _ = input_dim.size()
+        out_height = int(out_size[0])
+        out_width = int(out_size[1])
+        output_chunks = []
+
+        for row_start in range(0, out_height, chunk_rows):
+            row_end = min(row_start + chunk_rows, out_height)
+            rows = row_end - row_start
+            grid = _meshgrid_rows(
+                out_height, out_width, row_start, row_end, source
+            )
+            transformed_grid = torch.matmul(T, grid)
+            x_s = transformed_grid[:, 0, :].reshape(-1)
+            y_s = transformed_grid[:, 1, :].reshape(-1)
+            transformed = _interpolate(
+                input_dim, x_s, y_s, (rows, out_width)
+            )
+            transformed = transformed.reshape(
+                num_batch, rows, out_width, num_channels
+            )
+            output_chunks.append(transformed.permute(0, 3, 1, 2))
+
+        return torch.cat(output_chunks, dim=2)
 
 
     def _solve_system(source, target):
@@ -186,6 +235,16 @@ def transformer(U, source, target, out_size):
 
     T = _solve_system(source, target)
 
-    output = _transform(T, source, U, out_size)
+    out_height = int(out_size[0])
+    out_width = int(out_size[1])
+    chunk_threshold = int(os.environ.get("ROPSTITCH_TPS_CHUNK_THRESHOLD", "2000000"))
+    chunk_rows = int(os.environ.get("ROPSTITCH_TPS_CHUNK_ROWS", "128"))
+    if chunk_rows <= 0:
+        raise ValueError("ROPSTITCH_TPS_CHUNK_ROWS must be positive")
+
+    if out_height * out_width > chunk_threshold:
+        output = _transform_chunked(T, source, U, out_size, chunk_rows)
+    else:
+        output = _transform(T, source, U, out_size)
 
     return output
