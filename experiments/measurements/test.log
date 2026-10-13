@@ -1,0 +1,1488 @@
+<==================== Loading data ===================>
+
+Namespace(gpu='3', batch_size=1, max_epoch=5, woCoefNet_path='/workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth', test_path='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/', test_other_path='/workspace/python_pro/test1/RopStitch/data/stitch_real/', metrics_csv='/workspace/python_pro/test1/RopStitch/experiments/measurements/per_sample_metrics.csv', measurement_csv='/workspace/python_pro/test1/RopStitch/experiments/measurements/per_sample_measurements.csv', save_meshes_dir='/workspace/python_pro/test1/RopStitch/experiments/measurements/meshes', measurement_summary_json='/workspace/python_pro/test1/RopStitch/experiments/measurements/summary.json')
+odict_keys(['input1', 'input2'])
+odict_keys(['input1', 'input2'])
+/root/miniconda3/envs/ropstitch/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda3/envs/ropstitch/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+load homo net model from /workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth!
+load coef model from /workspace/python_pro/test1/RopStitch/wCoefNet/model_coef/epoch050_coefmodel.pth!
+##################start testing#######################
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+[ WARN:0@42.199] global loadsave.cpp:1089 imwrite_ Unsupported depth image for selected encoder is fallbacked to CV_8U.
+i = 1, best alpha = 0.0, best_ssim:0.6629762053489685
+i = 2, best alpha = 0.29629629629629634, best_ssim:0.4181757867336273
+i = 3, best alpha = 1.2592592592592593, best_ssim:0.37002888321876526
+i = 4, best alpha = 0.8888888888888891, best_ssim:0.24906717240810394
+i = 5, best alpha = 1.7037037037037037, best_ssim:0.5548314452171326
+i = 6, best alpha = 0.8888888888888891, best_ssim:0.7066361308097839
+i = 7, best alpha = 0.1111111111111111, best_ssim:0.6594443917274475
+i = 8, best alpha = 1.0617283950617284, best_ssim:0.7487257719039917
+i = 9, best alpha = 1.5555555555555556, best_ssim:0.055885616689920425
+i = 10, best alpha = 0.037037037037037035, best_ssim:0.5872859954833984
+i = 11, best alpha = 0.06172839506172839, best_ssim:0.641161322593689
+i = 12, best alpha = 1.8024691358024691, best_ssim:0.7927525043487549
+i = 13, best alpha = 1.7037037037037037, best_ssim:0.6553047895431519
+i = 14, best alpha = 0.7037037037037037, best_ssim:0.4689173996448517
+i = 15, best alpha = 0.19753086419753094, best_ssim:0.4664003252983093
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 16, best alpha = 0.0, best_ssim:0.6987125277519226
+i = 17, best alpha = -0.5061728395061729, best_ssim:0.5683460235595703
+i = 18, best alpha = -0.1111111111111111, best_ssim:0.694857656955719
+i = 19, best alpha = 1.5061728395061729, best_ssim:0.8126932978630066
+i = 20, best alpha = 0.6419753086419754, best_ssim:0.7622671127319336
+i = 21, best alpha = 0.4444444444444445, best_ssim:0.6471335291862488
+i = 22, best alpha = 1.0, best_ssim:0.7618807554244995
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 23, best alpha = 0.0, best_ssim:0.7033917903900146
+i = 24, best alpha = 0.0, best_ssim:0.733524739742279
+i = 25, best alpha = 0.7407407407407408, best_ssim:0.7513606548309326
+i = 26, best alpha = 1.0617283950617284, best_ssim:0.7206041812896729
+i = 27, best alpha = 0.9382716049382717, best_ssim:0.6124485731124878
+i = 28, best alpha = 0.33333333333333337, best_ssim:0.6359387636184692
+i = 29, best alpha = 1.308641975308642, best_ssim:0.6252486109733582
+i = 30, best alpha = 0.5061728395061729, best_ssim:0.4106842577457428
+i = 31, best alpha = -0.7037037037037037, best_ssim:0.4072723090648651
+i = 32, best alpha = -0.16049382716049382, best_ssim:0.4664904475212097
+i = 33, best alpha = 1.5061728395061729, best_ssim:0.4983779788017273
+i = 34, best alpha = -0.13580246913580252, best_ssim:0.34993699193000793
+i = 35, best alpha = 1.3333333333333335, best_ssim:0.5169556736946106
+i = 36, best alpha = 0.4444444444444445, best_ssim:0.49653953313827515
+i = 37, best alpha = 0.1111111111111111, best_ssim:0.38218745589256287
+i = 38, best alpha = 1.0, best_ssim:0.2576398253440857
+i = 39, best alpha = 1.8024691358024691, best_ssim:0.21707315742969513
+i = 40, best alpha = 1.5555555555555556, best_ssim:0.7023946642875671
+i = 41, best alpha = -0.5555555555555556, best_ssim:0.7016506195068359
+i = 42, best alpha = -0.16049382716049382, best_ssim:0.5662927627563477
+i = 43, best alpha = -0.4074074074074074, best_ssim:0.8166239857673645
+i = 44, best alpha = 1.5061728395061729, best_ssim:0.8424974679946899
+i = 45, best alpha = 0.0, best_ssim:0.843311071395874
+i = 46, best alpha = 1.5555555555555556, best_ssim:0.7953620553016663
+i = 47, best alpha = 1.4074074074074074, best_ssim:0.9265798926353455
+i = 48, best alpha = 1.1604938271604939, best_ssim:0.9035294055938721
+i = 49, best alpha = -0.1111111111111111, best_ssim:0.7952309250831604
+i = 50, best alpha = 1.3580246913580247, best_ssim:0.3445444107055664
+i = 51, best alpha = 0.8024691358024691, best_ssim:0.6796417832374573
+i = 52, best alpha = 0.4444444444444445, best_ssim:0.6597496867179871
+i = 53, best alpha = -0.7037037037037037, best_ssim:0.627524197101593
+i = 54, best alpha = 0.6049382716049383, best_ssim:0.49012991786003113
+i = 55, best alpha = 1.2592592592592593, best_ssim:0.2480815351009369
+i = 56, best alpha = -0.8024691358024691, best_ssim:0.3523239195346832
+i = 57, best alpha = 0.8395061728395062, best_ssim:0.8146689534187317
+i = 58, best alpha = 1.0, best_ssim:0.7284660339355469
+i = 59, best alpha = -0.8024691358024691, best_ssim:0.6702632308006287
+i = 60, best alpha = 0.5061728395061729, best_ssim:0.7275269031524658
+i = 61, best alpha = 1.1111111111111112, best_ssim:0.5052768588066101
+i = 62, best alpha = -0.4074074074074074, best_ssim:0.541124165058136
+i = 63, best alpha = -0.4074074074074074, best_ssim:0.47416526079177856
+i = 64, best alpha = 1.3333333333333335, best_ssim:0.5210671424865723
+i = 65, best alpha = 1.1604938271604939, best_ssim:0.4837851822376251
+i = 66, best alpha = -0.7037037037037037, best_ssim:0.5141662359237671
+i = 67, best alpha = 1.3333333333333335, best_ssim:0.527057945728302
+i = 68, best alpha = 0.4444444444444445, best_ssim:0.5719875693321228
+i = 69, best alpha = 1.2592592592592593, best_ssim:0.5940044522285461
+i = 70, best alpha = 0.33333333333333337, best_ssim:0.6421843767166138
+i = 71, best alpha = 0.30864197530864196, best_ssim:0.6568085551261902
+i = 72, best alpha = 0.1111111111111111, best_ssim:0.6033099889755249
+i = 73, best alpha = 0.5555555555555556, best_ssim:0.48856377601623535
+i = 74, best alpha = -0.33333333333333337, best_ssim:0.17803643643856049
+i = 75, best alpha = -0.7037037037037037, best_ssim:0.30074355006217957
+i = 76, best alpha = 1.8024691358024691, best_ssim:0.6652423739433289
+i = 77, best alpha = 0.037037037037037035, best_ssim:0.3388199508190155
+i = 78, best alpha = 1.2592592592592593, best_ssim:0.7242319583892822
+i = 79, best alpha = 1.8024691358024691, best_ssim:0.5418387055397034
+i = 80, best alpha = 0.0, best_ssim:0.3210804760456085
+i = 81, best alpha = 1.5061728395061729, best_ssim:0.6422232985496521
+i = 82, best alpha = 0.5925925925925928, best_ssim:0.35845065116882324
+i = 83, best alpha = 0.5925925925925928, best_ssim:0.46945279836654663
+i = 84, best alpha = 1.0617283950617284, best_ssim:0.396096408367157
+i = 85, best alpha = 0.3580246913580247, best_ssim:0.6773678064346313
+i = 86, best alpha = 1.1111111111111112, best_ssim:0.6105786561965942
+i = 87, best alpha = 0.9382716049382717, best_ssim:0.5175091624259949
+i = 88, best alpha = 1.8024691358024691, best_ssim:0.43805575370788574
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 89, best alpha = 0.0, best_ssim:0.2598031163215637
+i = 90, best alpha = 1.6049382716049383, best_ssim:0.6287566423416138
+i = 91, best alpha = 1.308641975308642, best_ssim:0.6114871501922607
+i = 92, best alpha = 0.4444444444444445, best_ssim:0.5181170701980591
+i = 93, best alpha = 0.037037037037037035, best_ssim:0.34903594851493835
+i = 94, best alpha = -0.5555555555555556, best_ssim:0.682547926902771
+i = 95, best alpha = 0.6666666666666666, best_ssim:0.7923848032951355
+i = 96, best alpha = -0.8024691358024691, best_ssim:0.46947237849235535
+i = 97, best alpha = 0.1111111111111111, best_ssim:0.4258221387863159
+i = 98, best alpha = -0.3580246913580247, best_ssim:0.46645018458366394
+i = 99, best alpha = -0.7037037037037037, best_ssim:0.6313797831535339
+i = 100, best alpha = 0.962962962962963, best_ssim:0.7724006175994873
+i = 101, best alpha = 0.5555555555555556, best_ssim:0.5108315348625183
+i = 102, best alpha = 1.8024691358024691, best_ssim:0.8465515971183777
+i = 103, best alpha = 1.4074074074074074, best_ssim:0.45026013255119324
+i = 104, best alpha = -0.037037037037037035, best_ssim:0.5822337865829468
+i = 105, best alpha = 0.4444444444444445, best_ssim:0.7242613434791565
+i = 106, best alpha = 1.0, best_ssim:0.5999217629432678
+i = 107, best alpha = -0.25925925925925924, best_ssim:0.6948598623275757
+i = 108, best alpha = 0.5061728395061729, best_ssim:0.6666268706321716
+i = 109, best alpha = 1.7037037037037037, best_ssim:0.5836052894592285
+i = 110, best alpha = 0.3950617283950618, best_ssim:0.7737302780151367
+i = 111, best alpha = 1.8024691358024691, best_ssim:0.8745816349983215
+i = 112, best alpha = 1.7037037037037037, best_ssim:0.3980486989021301
+i = 113, best alpha = 1.5555555555555556, best_ssim:0.5754272937774658
+i = 114, best alpha = 1.8024691358024691, best_ssim:0.6467276811599731
+i = 115, best alpha = 1.2592592592592593, best_ssim:0.261567622423172
+i = 116, best alpha = 1.8024691358024691, best_ssim:0.3655436336994171
+i = 117, best alpha = 0.6666666666666666, best_ssim:0.6644732356071472
+i = 118, best alpha = -0.25925925925925924, best_ssim:0.6089963316917419
+i = 119, best alpha = 1.8024691358024691, best_ssim:0.3537769317626953
+i = 120, best alpha = 0.25925925925925924, best_ssim:0.5254427194595337
+i = 121, best alpha = 1.4074074074074074, best_ssim:0.8388447165489197
+warp size is too huge None! pass this image.
+i = 122, best alpha = 1.1358024691358026, best_ssim:0.5579412579536438
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 123, best alpha = 0.0, best_ssim:0.4107905626296997
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 124, best alpha = 0.0, best_ssim:0.3772928714752197
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 125, best alpha = 0.0, best_ssim:0.23006190359592438
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 126, best alpha = 0.0, best_ssim:0.2769145965576172
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 127, best alpha = 0.0, best_ssim:0.30670106410980225
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 128, best alpha = 0.0, best_ssim:0.32783764600753784
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 129, best alpha = 0.0, best_ssim:0.1590600460767746
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 130, best alpha = 0.0, best_ssim:0.2435688078403473
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 131, best alpha = 0.0, best_ssim:0.15897734463214874
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 132, best alpha = 0.0, best_ssim:0.5341025590896606
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 133, best alpha = 0.33333333333333337, best_ssim:0.4560490548610687
+i = 134, best alpha = 1.7037037037037037, best_ssim:0.8519132137298584
+i = 135, best alpha = 0.4074074074074074, best_ssim:0.3341658115386963
+i = 136, best alpha = 1.3333333333333335, best_ssim:0.7464513778686523
+i = 137, best alpha = -0.33333333333333337, best_ssim:0.6466529369354248
+i = 138, best alpha = 0.0, best_ssim:0.5904957056045532
+i = 139, best alpha = 1.0, best_ssim:0.8295267820358276
+i = 140, best alpha = 1.5555555555555556, best_ssim:0.7586316466331482
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 141, best alpha = 0.0, best_ssim:0.28631454706192017
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 142, best alpha = 0.0, best_ssim:0.21937814354896545
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 143, best alpha = 0.0, best_ssim:0.19665932655334473
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 144, best alpha = 0.0, best_ssim:0.2712433934211731
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 145, best alpha = 0.0, best_ssim:0.336249977350235
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+warp size is too huge None! pass this image.
+i = 146, best alpha = 0.0, best_ssim:0.36807486414909363
+i = 147, best alpha = 0.6666666666666666, best_ssim:0.68264240026474
+top 30% 23.036018
+top 30~60% 17.939363
+top 60~100% 13.111804
+average psnr: 17.527302
+top 30% 0.75995344
+top 30~60% 0.5956878
+top 60~100% 0.3554616
+average ssim: 0.54843843
+i = 1, best alpha = 0.6913580246913581, best_ssim:0.9288317561149597
+i = 2, best alpha = 1.8024691358024691, best_ssim:0.9401013255119324
+i = 3, best alpha = 0.25925925925925924, best_ssim:0.9600623846054077
+i = 4, best alpha = -0.8024691358024691, best_ssim:0.8939855098724365
+i = 5, best alpha = 0.8395061728395062, best_ssim:0.7939248085021973
+i = 6, best alpha = 0.0, best_ssim:0.8528010845184326
+i = 7, best alpha = 0.8024691358024691, best_ssim:0.7976128458976746
+i = 8, best alpha = 0.8395061728395062, best_ssim:0.7570072412490845
+i = 9, best alpha = 1.5061728395061729, best_ssim:0.8755108714103699
+i = 10, best alpha = 0.6049382716049383, best_ssim:0.8609045147895813
+i = 11, best alpha = 0.8888888888888891, best_ssim:0.8548440933227539
+i = 12, best alpha = 0.7407407407407408, best_ssim:0.8525612354278564
+i = 13, best alpha = 0.6666666666666666, best_ssim:0.8403275609016418
+i = 14, best alpha = 0.25925925925925924, best_ssim:0.8571656346321106
+i = 15, best alpha = 0.33333333333333337, best_ssim:0.7934377789497375
+i = 16, best alpha = 1.1604938271604939, best_ssim:0.8400336503982544
+i = 17, best alpha = 0.4444444444444445, best_ssim:0.887490451335907
+i = 18, best alpha = -0.33333333333333337, best_ssim:0.894596517086029
+i = 19, best alpha = 1.0617283950617284, best_ssim:0.8917520046234131
+i = 20, best alpha = 0.49382716049382724, best_ssim:0.8964691162109375
+i = 21, best alpha = 0.6913580246913581, best_ssim:0.9006146192550659
+i = 22, best alpha = 1.7037037037037037, best_ssim:0.8887848258018494
+i = 23, best alpha = 0.9382716049382717, best_ssim:0.8946416974067688
+i = 24, best alpha = -0.33333333333333337, best_ssim:0.7657184600830078
+i = 25, best alpha = 0.4444444444444445, best_ssim:0.7800689935684204
+i = 26, best alpha = 0.3950617283950618, best_ssim:0.8850082755088806
+i = 27, best alpha = 0.6913580246913581, best_ssim:0.8781700134277344
+i = 28, best alpha = 1.0, best_ssim:0.7996836304664612
+i = 29, best alpha = 1.0617283950617284, best_ssim:0.833796501159668
+i = 30, best alpha = 1.6049382716049383, best_ssim:0.9144518971443176
+i = 31, best alpha = 1.5555555555555556, best_ssim:0.920129120349884
+i = 32, best alpha = -0.8024691358024691, best_ssim:0.9562808275222778
+i = 33, best alpha = 0.4444444444444445, best_ssim:0.8971434235572815
+i = 34, best alpha = 0.6419753086419754, best_ssim:0.8971041440963745
+i = 35, best alpha = 0.6419753086419754, best_ssim:0.829670786857605
+i = 36, best alpha = 1.0, best_ssim:0.8133192658424377
+i = 37, best alpha = 0.25925925925925924, best_ssim:0.8009001016616821
+i = 38, best alpha = 1.0, best_ssim:0.8022974133491516
+i = 39, best alpha = 0.8888888888888891, best_ssim:0.8065146207809448
+i = 40, best alpha = 0.25925925925925924, best_ssim:0.8906251788139343
+i = 41, best alpha = 1.1111111111111112, best_ssim:0.7903174757957458
+i = 42, best alpha = 1.0, best_ssim:0.7765032649040222
+i = 43, best alpha = 0.33333333333333337, best_ssim:0.7862101197242737
+i = 44, best alpha = 0.19753086419753094, best_ssim:0.8740095496177673
+i = 45, best alpha = 1.2592592592592593, best_ssim:0.8172135949134827
+i = 46, best alpha = 1.1111111111111112, best_ssim:0.7914482355117798
+i = 47, best alpha = 0.19753086419753094, best_ssim:0.893481969833374
+i = 48, best alpha = 0.0, best_ssim:0.9074611067771912
+i = 49, best alpha = -0.25925925925925924, best_ssim:0.8838924765586853
+i = 50, best alpha = 0.6049382716049383, best_ssim:0.8925430178642273
+i = 51, best alpha = 1.0, best_ssim:0.8827145099639893
+i = 52, best alpha = 1.0617283950617284, best_ssim:0.8943622708320618
+i = 53, best alpha = 1.8024691358024691, best_ssim:0.8441134095191956
+i = 54, best alpha = 1.1358024691358026, best_ssim:0.9047774076461792
+i = 55, best alpha = 0.7407407407407408, best_ssim:0.9300619959831238
+i = 56, best alpha = 0.7407407407407408, best_ssim:0.9300135374069214
+i = 57, best alpha = 0.4444444444444445, best_ssim:0.9238511323928833
+i = 58, best alpha = 0.16049382716049382, best_ssim:0.932138204574585
+i = 59, best alpha = 0.6049382716049383, best_ssim:0.9190651178359985
+i = 60, best alpha = 0.4444444444444445, best_ssim:0.8883806467056274
+i = 61, best alpha = 1.7037037037037037, best_ssim:0.8611483573913574
+i = 62, best alpha = 1.3333333333333335, best_ssim:0.8894087076187134
+i = 63, best alpha = 1.1604938271604939, best_ssim:0.8962042927742004
+i = 64, best alpha = 1.308641975308642, best_ssim:0.9373086094856262
+i = 65, best alpha = 1.3333333333333335, best_ssim:0.9227350354194641
+i = 66, best alpha = 1.1111111111111112, best_ssim:0.8716358542442322
+i = 67, best alpha = 1.2592592592592593, best_ssim:0.8514550924301147
+i = 68, best alpha = -0.5061728395061729, best_ssim:0.9105095863342285
+i = 69, best alpha = 1.3333333333333335, best_ssim:0.9053797125816345
+i = 70, best alpha = 0.0, best_ssim:0.905870795249939
+i = 71, best alpha = 0.037037037037037035, best_ssim:0.8964673280715942
+i = 72, best alpha = 0.5061728395061729, best_ssim:0.9288420677185059
+i = 73, best alpha = 0.8395061728395062, best_ssim:0.9363462924957275
+i = 74, best alpha = 0.3950617283950618, best_ssim:0.9176135659217834
+i = 75, best alpha = 0.1111111111111111, best_ssim:0.9155305624008179
+i = 76, best alpha = 0.7037037037037037, best_ssim:0.9330646395683289
+i = 77, best alpha = 0.49382716049382724, best_ssim:0.7858839631080627
+i = 78, best alpha = 0.8395061728395062, best_ssim:0.7859388589859009
+i = 79, best alpha = 0.8395061728395062, best_ssim:0.8097406029701233
+i = 80, best alpha = 1.4074074074074074, best_ssim:0.8753044009208679
+i = 81, best alpha = 0.7407407407407408, best_ssim:0.8178595304489136
+i = 82, best alpha = 0.6419753086419754, best_ssim:0.8827330470085144
+i = 83, best alpha = 0.7407407407407408, best_ssim:0.861507773399353
+i = 84, best alpha = -0.33333333333333337, best_ssim:0.9001030921936035
+i = 85, best alpha = 0.9382716049382717, best_ssim:0.9038469195365906
+i = 86, best alpha = 0.7407407407407408, best_ssim:0.9002255797386169
+i = 87, best alpha = 1.0, best_ssim:0.8744891285896301
+i = 88, best alpha = 0.962962962962963, best_ssim:0.8960980176925659
+i = 89, best alpha = -0.25925925925925924, best_ssim:0.8724803924560547
+i = 90, best alpha = 1.2592592592592593, best_ssim:0.8411006927490234
+i = 91, best alpha = 0.962962962962963, best_ssim:0.9499639272689819
+i = 92, best alpha = 0.29629629629629634, best_ssim:0.734928548336029
+i = 93, best alpha = 0.29629629629629634, best_ssim:0.8906494975090027
+i = 94, best alpha = 0.1111111111111111, best_ssim:0.9559409022331238
+i = 95, best alpha = 0.6666666666666666, best_ssim:0.9584156274795532
+i = 96, best alpha = 0.6666666666666666, best_ssim:0.9538702964782715
+i = 97, best alpha = 0.25925925925925924, best_ssim:0.9664019346237183
+i = 98, best alpha = 0.29629629629629634, best_ssim:0.9595444202423096
+i = 99, best alpha = -0.1111111111111111, best_ssim:0.9656737446784973
+i = 100, best alpha = 0.16049382716049382, best_ssim:0.9721127152442932
+i = 101, best alpha = 0.3580246913580247, best_ssim:0.9574143290519714
+i = 102, best alpha = 0.6419753086419754, best_ssim:0.9670805931091309
+i = 103, best alpha = 0.16049382716049382, best_ssim:0.9671591520309448
+i = 104, best alpha = 1.2592592592592593, best_ssim:0.957687258720398
+i = 105, best alpha = 0.6666666666666666, best_ssim:0.9590702652931213
+i = 106, best alpha = 0.6913580246913581, best_ssim:0.9525101184844971
+i = 107, best alpha = 1.1111111111111112, best_ssim:0.9484518766403198
+i = 108, best alpha = 1.0617283950617284, best_ssim:0.9614629745483398
+i = 109, best alpha = 0.3580246913580247, best_ssim:0.9428969621658325
+i = 110, best alpha = 0.4444444444444445, best_ssim:0.9599584937095642
+i = 111, best alpha = -0.037037037037037035, best_ssim:0.9515508413314819
+i = 112, best alpha = 1.1604938271604939, best_ssim:0.9445955157279968
+i = 113, best alpha = 1.0370370370370372, best_ssim:0.9238486289978027
+i = 114, best alpha = 0.5925925925925928, best_ssim:0.9633427262306213
+i = 115, best alpha = 1.0370370370370372, best_ssim:0.9434228539466858
+i = 116, best alpha = -0.4074074074074074, best_ssim:0.9057603478431702
+i = 117, best alpha = 0.16049382716049382, best_ssim:0.9057552218437195
+i = 118, best alpha = 1.2592592592592593, best_ssim:0.9477190971374512
+i = 119, best alpha = 0.19753086419753094, best_ssim:0.9521166682243347
+i = 120, best alpha = 0.49382716049382724, best_ssim:0.9307054877281189
+i = 121, best alpha = 0.5925925925925928, best_ssim:0.9123544096946716
+i = 122, best alpha = 0.7407407407407408, best_ssim:0.9083995819091797
+i = 123, best alpha = 0.4444444444444445, best_ssim:0.9215183854103088
+i = 124, best alpha = 1.2592592592592593, best_ssim:0.8079952597618103
+i = 125, best alpha = 0.9382716049382717, best_ssim:0.8149086833000183
+i = 126, best alpha = 0.8888888888888891, best_ssim:0.7958800196647644
+i = 127, best alpha = 1.0, best_ssim:0.6782436966896057
+i = 128, best alpha = 0.7407407407407408, best_ssim:0.70673668384552
+i = 129, best alpha = 0.8888888888888891, best_ssim:0.8177416920661926
+i = 130, best alpha = 0.5555555555555556, best_ssim:0.9384227991104126
+i = 131, best alpha = 0.5925925925925928, best_ssim:0.9496282339096069
+i = 132, best alpha = 0.6419753086419754, best_ssim:0.9562441110610962
+i = 133, best alpha = 0.49382716049382724, best_ssim:0.9476408362388611
+i = 134, best alpha = 1.3580246913580247, best_ssim:0.9165769219398499
+i = 135, best alpha = 1.2592592592592593, best_ssim:0.944132387638092
+i = 136, best alpha = 0.5925925925925928, best_ssim:0.9571345448493958
+i = 137, best alpha = -0.1111111111111111, best_ssim:0.9201887249946594
+i = 138, best alpha = 1.5555555555555556, best_ssim:0.9605933427810669
+i = 139, best alpha = 0.6049382716049383, best_ssim:0.9568398594856262
+i = 140, best alpha = 1.1111111111111112, best_ssim:0.9366347193717957
+i = 141, best alpha = 0.5925925925925928, best_ssim:0.9316641688346863
+i = 142, best alpha = 0.06172839506172839, best_ssim:0.9327377676963806
+i = 143, best alpha = 0.037037037037037035, best_ssim:0.8468124270439148
+i = 144, best alpha = -0.037037037037037035, best_ssim:0.8907263278961182
+i = 145, best alpha = 0.1111111111111111, best_ssim:0.9128227233886719
+i = 146, best alpha = 1.0, best_ssim:0.8952285647392273
+i = 147, best alpha = 1.0617283950617284, best_ssim:0.9379303455352783
+i = 148, best alpha = 0.4444444444444445, best_ssim:0.8407232761383057
+i = 149, best alpha = 0.49382716049382724, best_ssim:0.8832111358642578
+i = 150, best alpha = 0.29629629629629634, best_ssim:0.7863174676895142
+i = 151, best alpha = 0.962962962962963, best_ssim:0.8038713932037354
+i = 152, best alpha = 0.8888888888888891, best_ssim:0.8912516832351685
+i = 153, best alpha = 0.1111111111111111, best_ssim:0.8906854391098022
+i = 154, best alpha = 0.16049382716049382, best_ssim:0.8043012619018555
+i = 155, best alpha = 0.7407407407407408, best_ssim:0.87862628698349
+i = 156, best alpha = 0.8888888888888891, best_ssim:0.35768893361091614
+i = 157, best alpha = 0.25925925925925924, best_ssim:0.6358963847160339
+i = 158, best alpha = 1.1604938271604939, best_ssim:0.6407498717308044
+i = 159, best alpha = 0.4444444444444445, best_ssim:0.6229971051216125
+i = 160, best alpha = -0.7037037037037037, best_ssim:0.5827399492263794
+i = 161, best alpha = 0.1111111111111111, best_ssim:0.7024456262588501
+i = 162, best alpha = 1.3333333333333335, best_ssim:0.7222528457641602
+i = 163, best alpha = 1.0, best_ssim:0.7831697463989258
+i = 164, best alpha = -0.25925925925925924, best_ssim:0.7404884696006775
+i = 165, best alpha = 0.7407407407407408, best_ssim:0.7714554667472839
+i = 166, best alpha = 0.8641975308641975, best_ssim:0.8374865055084229
+i = 167, best alpha = 0.0, best_ssim:0.7460845708847046
+i = 168, best alpha = 0.7037037037037037, best_ssim:0.7487454414367676
+i = 169, best alpha = 1.2592592592592593, best_ssim:0.694486141204834
+i = 170, best alpha = 0.33333333333333337, best_ssim:0.6608495116233826
+i = 171, best alpha = 1.1604938271604939, best_ssim:0.8076467514038086
+i = 172, best alpha = 1.0617283950617284, best_ssim:0.8455005884170532
+i = 173, best alpha = 1.5061728395061729, best_ssim:0.8371586799621582
+i = 174, best alpha = 0.4444444444444445, best_ssim:0.9067250490188599
+i = 175, best alpha = 1.0370370370370372, best_ssim:0.6321543455123901
+i = 176, best alpha = 1.2592592592592593, best_ssim:0.6766505837440491
+i = 177, best alpha = 0.6913580246913581, best_ssim:0.5768172144889832
+i = 178, best alpha = 0.4444444444444445, best_ssim:0.8945831656455994
+i = 179, best alpha = 0.6419753086419754, best_ssim:0.4800092577934265
+i = 180, best alpha = 0.8888888888888891, best_ssim:0.8331393003463745
+i = 181, best alpha = 0.9382716049382717, best_ssim:0.8728659749031067
+i = 182, best alpha = 0.6666666666666666, best_ssim:0.8914950489997864
+i = 183, best alpha = 1.2592592592592593, best_ssim:0.9194831252098083
+i = 184, best alpha = 1.0, best_ssim:0.9087872505187988
+i = 185, best alpha = 0.16049382716049382, best_ssim:0.8890329003334045
+i = 186, best alpha = 0.33333333333333337, best_ssim:0.8785181641578674
+i = 187, best alpha = 0.8395061728395062, best_ssim:0.9428032040596008
+i = 188, best alpha = 0.33333333333333337, best_ssim:0.8051078915596008
+i = 189, best alpha = 1.7037037037037037, best_ssim:0.5614622831344604
+i = 190, best alpha = 1.6049382716049383, best_ssim:0.5741674304008484
+i = 191, best alpha = 0.49382716049382724, best_ssim:0.5199019908905029
+i = 192, best alpha = 0.1111111111111111, best_ssim:0.597801685333252
+i = 193, best alpha = 1.0, best_ssim:0.7332559823989868
+i = 194, best alpha = 0.25925925925925924, best_ssim:0.6337409615516663
+i = 195, best alpha = 0.29629629629629634, best_ssim:0.724247932434082
+i = 196, best alpha = 1.1604938271604939, best_ssim:0.6475623846054077
+i = 197, best alpha = -0.8024691358024691, best_ssim:0.6409034132957458
+i = 198, best alpha = 0.29629629629629634, best_ssim:0.7236700654029846
+i = 199, best alpha = 1.1358024691358026, best_ssim:0.7814809083938599
+i = 200, best alpha = 0.8888888888888891, best_ssim:0.7758617401123047
+i = 201, best alpha = 0.49382716049382724, best_ssim:0.783565104007721
+i = 202, best alpha = 0.6419753086419754, best_ssim:0.8129178285598755
+i = 203, best alpha = 0.5555555555555556, best_ssim:0.7834270000457764
+i = 204, best alpha = 0.6666666666666666, best_ssim:0.787858247756958
+i = 205, best alpha = 0.49382716049382724, best_ssim:0.7794427275657654
+i = 206, best alpha = 0.13580246913580252, best_ssim:0.7952122092247009
+i = 207, best alpha = 1.1358024691358026, best_ssim:0.7450131177902222
+i = 208, best alpha = -0.037037037037037035, best_ssim:0.7521668672561646
+i = 209, best alpha = 0.29629629629629634, best_ssim:0.8156685829162598
+i = 210, best alpha = 0.5061728395061729, best_ssim:0.7623174786567688
+i = 211, best alpha = 0.16049382716049382, best_ssim:0.8057473301887512
+i = 212, best alpha = 1.0, best_ssim:0.7480149269104004
+i = 213, best alpha = 1.5555555555555556, best_ssim:0.7640494108200073
+i = 214, best alpha = 0.7407407407407408, best_ssim:0.8327000141143799
+i = 215, best alpha = -0.1111111111111111, best_ssim:0.8256308436393738
+i = 216, best alpha = -0.1111111111111111, best_ssim:0.7780261039733887
+i = 217, best alpha = 1.4074074074074074, best_ssim:0.8144010305404663
+i = 218, best alpha = 0.16049382716049382, best_ssim:0.7917973399162292
+i = 219, best alpha = 0.5061728395061729, best_ssim:0.8660094141960144
+i = 220, best alpha = 1.0, best_ssim:0.7938084602355957
+i = 221, best alpha = 0.8395061728395062, best_ssim:0.8005771040916443
+i = 222, best alpha = 1.0, best_ssim:0.8852308988571167
+i = 223, best alpha = 0.5925925925925928, best_ssim:0.8931496143341064
+i = 224, best alpha = -0.33333333333333337, best_ssim:0.8962836265563965
+i = 225, best alpha = 0.06172839506172839, best_ssim:0.8987166881561279
+i = 226, best alpha = 0.7037037037037037, best_ssim:0.8669058680534363
+i = 227, best alpha = 0.33333333333333337, best_ssim:0.8268013596534729
+i = 228, best alpha = -0.037037037037037035, best_ssim:0.8465118408203125
+i = 229, best alpha = 1.0, best_ssim:0.5712422728538513
+i = 230, best alpha = 0.4074074074074074, best_ssim:0.5535686612129211
+i = 231, best alpha = 0.4444444444444445, best_ssim:0.9141988754272461
+i = 232, best alpha = 0.33333333333333337, best_ssim:0.9236776232719421
+i = 233, best alpha = -0.06172839506172839, best_ssim:0.6963587403297424
+i = 234, best alpha = 0.8888888888888891, best_ssim:0.6042953133583069
+i = 235, best alpha = 0.8395061728395062, best_ssim:0.5541190505027771
+i = 236, best alpha = 0.8395061728395062, best_ssim:0.7099848389625549
+i = 237, best alpha = 0.25925925925925924, best_ssim:0.741481602191925
+i = 238, best alpha = 0.8395061728395062, best_ssim:0.4798036217689514
+i = 239, best alpha = 0.7407407407407408, best_ssim:0.9624158143997192
+i = 240, best alpha = 0.7407407407407408, best_ssim:0.9585179686546326
+i = 241, best alpha = 1.5061728395061729, best_ssim:0.9508216381072998
+i = 242, best alpha = 0.962962962962963, best_ssim:0.9537598490715027
+i = 243, best alpha = 0.6666666666666666, best_ssim:0.9148789048194885
+i = 244, best alpha = 0.3580246913580247, best_ssim:0.8856248259544373
+i = 245, best alpha = 1.5555555555555556, best_ssim:0.9354032874107361
+i = 246, best alpha = 0.3950617283950618, best_ssim:0.9424852728843689
+i = 247, best alpha = 1.1604938271604939, best_ssim:0.9490706920623779
+i = 248, best alpha = 1.3333333333333335, best_ssim:0.8897345066070557
+i = 249, best alpha = 1.1358024691358026, best_ssim:0.8928016424179077
+i = 250, best alpha = 0.33333333333333337, best_ssim:0.8042308688163757
+i = 251, best alpha = -0.06172839506172839, best_ssim:0.6552870273590088
+i = 252, best alpha = 0.0, best_ssim:0.6621230840682983
+i = 253, best alpha = 0.8395061728395062, best_ssim:0.886766254901886
+i = 254, best alpha = 1.0, best_ssim:0.9244595170021057
+i = 255, best alpha = 0.6666666666666666, best_ssim:0.9617036581039429
+i = 256, best alpha = 0.0, best_ssim:0.9235228896141052
+i = 257, best alpha = 1.1111111111111112, best_ssim:0.9290800094604492
+i = 258, best alpha = 0.49382716049382724, best_ssim:0.9238356947898865
+i = 259, best alpha = 0.7407407407407408, best_ssim:0.9025350213050842
+i = 260, best alpha = 0.6666666666666666, best_ssim:0.9011437892913818
+i = 261, best alpha = 0.5925925925925928, best_ssim:0.7646183967590332
+i = 262, best alpha = 1.2592592592592593, best_ssim:0.6349334120750427
+i = 263, best alpha = 0.06172839506172839, best_ssim:0.6661779880523682
+i = 264, best alpha = 0.1111111111111111, best_ssim:0.6800544857978821
+i = 265, best alpha = 0.30864197530864196, best_ssim:0.740260124206543
+i = 266, best alpha = 0.9382716049382717, best_ssim:0.7902883887290955
+i = 267, best alpha = 0.7407407407407408, best_ssim:0.7692228555679321
+i = 268, best alpha = 0.0, best_ssim:0.8355081081390381
+i = 269, best alpha = 0.6666666666666666, best_ssim:0.7049634456634521
+i = 270, best alpha = 0.962962962962963, best_ssim:0.41215163469314575
+i = 271, best alpha = 0.3580246913580247, best_ssim:0.4461519718170166
+i = 272, best alpha = 0.7407407407407408, best_ssim:0.2641407549381256
+i = 273, best alpha = -0.25925925925925924, best_ssim:0.24254125356674194
+i = 274, best alpha = 1.0, best_ssim:0.39038997888565063
+i = 275, best alpha = 1.0370370370370372, best_ssim:0.41684940457344055
+i = 276, best alpha = 0.6666666666666666, best_ssim:0.790110170841217
+i = 277, best alpha = 1.5061728395061729, best_ssim:0.850235104560852
+i = 278, best alpha = 1.4074074074074074, best_ssim:0.8064061403274536
+i = 279, best alpha = 1.5555555555555556, best_ssim:0.7842450737953186
+i = 280, best alpha = 0.8395061728395062, best_ssim:0.7324785590171814
+i = 281, best alpha = 0.30864197530864196, best_ssim:0.8076053261756897
+i = 282, best alpha = -0.33333333333333337, best_ssim:0.8043087720870972
+i = 283, best alpha = 1.1604938271604939, best_ssim:0.865420401096344
+i = 284, best alpha = -0.33333333333333337, best_ssim:0.531170129776001
+i = 285, best alpha = 1.0370370370370372, best_ssim:0.742089033126831
+i = 286, best alpha = 0.4074074074074074, best_ssim:0.6313508749008179
+i = 287, best alpha = 0.8641975308641975, best_ssim:0.6397576928138733
+i = 288, best alpha = 0.29629629629629634, best_ssim:0.8467530012130737
+i = 289, best alpha = 0.6913580246913581, best_ssim:0.8585641980171204
+i = 290, best alpha = 1.2592592592592593, best_ssim:0.7840175032615662
+i = 291, best alpha = 0.16049382716049382, best_ssim:0.8583574891090393
+i = 292, best alpha = 1.0, best_ssim:0.8159913420677185
+i = 293, best alpha = 0.4074074074074074, best_ssim:0.9163742065429688
+i = 294, best alpha = 0.6913580246913581, best_ssim:0.9270443916320801
+i = 295, best alpha = 0.3950617283950618, best_ssim:0.9095715284347534
+i = 296, best alpha = 1.0, best_ssim:0.8455307483673096
+i = 297, best alpha = 0.0, best_ssim:0.8274059295654297
+i = 298, best alpha = 1.0, best_ssim:0.9441065192222595
+i = 299, best alpha = 1.0617283950617284, best_ssim:0.7031347751617432
+i = 300, best alpha = 1.0370370370370372, best_ssim:0.6546378135681152
+i = 301, best alpha = 1.1111111111111112, best_ssim:0.8063560724258423
+i = 302, best alpha = -0.25925925925925924, best_ssim:0.6143679022789001
+i = 303, best alpha = 0.6049382716049383, best_ssim:0.5873777270317078
+i = 304, best alpha = -0.037037037037037035, best_ssim:0.8326988816261292
+i = 305, best alpha = 0.33333333333333337, best_ssim:0.8066206574440002
+i = 306, best alpha = 1.0, best_ssim:0.7246255874633789
+i = 307, best alpha = 1.7037037037037037, best_ssim:0.6800147891044617
+i = 308, best alpha = 1.3333333333333335, best_ssim:0.6241899728775024
+i = 309, best alpha = 0.0, best_ssim:0.4674833118915558
+i = 310, best alpha = -0.25925925925925924, best_ssim:0.5917146801948547
+i = 311, best alpha = 0.7407407407407408, best_ssim:0.44197165966033936
+i = 312, best alpha = 1.1358024691358026, best_ssim:0.7107567191123962
+i = 313, best alpha = 1.0, best_ssim:0.708505392074585
+i = 314, best alpha = 0.33333333333333337, best_ssim:0.6035208106040955
+i = 315, best alpha = -0.06172839506172839, best_ssim:0.7544846534729004
+i = 316, best alpha = -0.30864197530864196, best_ssim:0.7949169278144836
+i = 317, best alpha = 0.4074074074074074, best_ssim:0.6798193454742432
+i = 318, best alpha = 0.6666666666666666, best_ssim:0.8197479844093323
+i = 319, best alpha = 0.29629629629629634, best_ssim:0.7904735803604126
+i = 320, best alpha = 1.0, best_ssim:0.9323235750198364
+i = 321, best alpha = 0.9382716049382717, best_ssim:0.9169515371322632
+i = 322, best alpha = 0.8888888888888891, best_ssim:0.9041346311569214
+i = 323, best alpha = 0.3950617283950618, best_ssim:0.7256933450698853
+i = 324, best alpha = 0.5925925925925928, best_ssim:0.7531195878982544
+i = 325, best alpha = 0.30864197530864196, best_ssim:0.6069887280464172
+i = 326, best alpha = 0.8641975308641975, best_ssim:0.5669685006141663
+i = 327, best alpha = 1.3580246913580247, best_ssim:0.9099617004394531
+i = 328, best alpha = 0.25925925925925924, best_ssim:0.8605856895446777
+i = 329, best alpha = 0.1111111111111111, best_ssim:0.857795238494873
+i = 330, best alpha = 1.1604938271604939, best_ssim:0.8680307269096375
+i = 331, best alpha = 0.5925925925925928, best_ssim:0.9329827427864075
+i = 332, best alpha = 0.6666666666666666, best_ssim:0.8938546776771545
+i = 333, best alpha = 0.4444444444444445, best_ssim:0.8763349056243896
+i = 334, best alpha = 0.6666666666666666, best_ssim:0.9193345904350281
+i = 335, best alpha = 0.13580246913580252, best_ssim:0.9222606420516968
+i = 336, best alpha = 0.49382716049382724, best_ssim:0.8407974243164062
+i = 337, best alpha = 0.6419753086419754, best_ssim:0.8004332184791565
+i = 338, best alpha = 0.4444444444444445, best_ssim:0.8035262227058411
+i = 339, best alpha = 1.0, best_ssim:0.7783044576644897
+i = 340, best alpha = 1.0370370370370372, best_ssim:0.7796683311462402
+i = 341, best alpha = 0.7407407407407408, best_ssim:0.8345186114311218
+i = 342, best alpha = 1.0, best_ssim:0.6790793538093567
+i = 343, best alpha = 0.7407407407407408, best_ssim:0.7111725807189941
+i = 344, best alpha = 1.4074074074074074, best_ssim:0.6418964862823486
+i = 345, best alpha = 0.6666666666666666, best_ssim:0.47963985800743103
+i = 346, best alpha = 0.7407407407407408, best_ssim:0.7084242701530457
+i = 347, best alpha = -0.1111111111111111, best_ssim:0.7286116480827332
+i = 348, best alpha = 0.6913580246913581, best_ssim:0.8520054221153259
+i = 349, best alpha = 0.16049382716049382, best_ssim:0.8456258177757263
+i = 350, best alpha = 0.6913580246913581, best_ssim:0.7901230454444885
+i = 351, best alpha = 0.6049382716049383, best_ssim:0.7879804968833923
+i = 352, best alpha = 0.6666666666666666, best_ssim:0.8274778127670288
+i = 353, best alpha = 0.6666666666666666, best_ssim:0.8058699369430542
+i = 354, best alpha = 0.6666666666666666, best_ssim:0.8081313371658325
+i = 355, best alpha = 0.7407407407407408, best_ssim:0.8256344795227051
+i = 356, best alpha = 0.8888888888888891, best_ssim:0.6691704392433167
+i = 357, best alpha = 0.5925925925925928, best_ssim:0.827583372592926
+i = 358, best alpha = -0.037037037037037035, best_ssim:0.655048131942749
+i = 359, best alpha = 0.8395061728395062, best_ssim:0.6178082227706909
+i = 360, best alpha = 1.1111111111111112, best_ssim:0.5921188592910767
+i = 361, best alpha = 1.3333333333333335, best_ssim:0.582042396068573
+i = 362, best alpha = 0.8395061728395062, best_ssim:0.7765487432479858
+i = 363, best alpha = 0.3580246913580247, best_ssim:0.5921716094017029
+i = 364, best alpha = 1.0, best_ssim:0.7074553966522217
+i = 365, best alpha = 1.0370370370370372, best_ssim:0.4927002191543579
+i = 366, best alpha = 0.8641975308641975, best_ssim:0.34703367948532104
+i = 367, best alpha = 1.0370370370370372, best_ssim:0.4585227072238922
+i = 368, best alpha = 0.9382716049382717, best_ssim:0.5366085171699524
+i = 369, best alpha = 0.4444444444444445, best_ssim:0.6155762672424316
+i = 370, best alpha = 0.33333333333333337, best_ssim:0.418827086687088
+i = 371, best alpha = 0.33333333333333337, best_ssim:0.8656438589096069
+i = 372, best alpha = 0.4444444444444445, best_ssim:0.8781447410583496
+i = 373, best alpha = 0.5925925925925928, best_ssim:0.8046589493751526
+i = 374, best alpha = 0.7407407407407408, best_ssim:0.6250673532485962
+i = 375, best alpha = 0.5925925925925928, best_ssim:0.8349761962890625
+i = 376, best alpha = 1.3333333333333335, best_ssim:0.8213666081428528
+i = 377, best alpha = 1.3333333333333335, best_ssim:0.8182501792907715
+i = 378, best alpha = 0.5061728395061729, best_ssim:0.8091200590133667
+i = 379, best alpha = 0.49382716049382724, best_ssim:0.8414371609687805
+i = 380, best alpha = 0.5925925925925928, best_ssim:0.8300580978393555
+i = 381, best alpha = 0.0, best_ssim:0.8608191609382629
+i = 382, best alpha = 0.5925925925925928, best_ssim:0.858021080493927
+i = 383, best alpha = 0.7037037037037037, best_ssim:0.8284974694252014
+i = 384, best alpha = 0.4444444444444445, best_ssim:0.8358508348464966
+i = 385, best alpha = 1.1111111111111112, best_ssim:0.7827005982398987
+i = 386, best alpha = 0.3580246913580247, best_ssim:0.7916154861450195
+i = 387, best alpha = 0.8395061728395062, best_ssim:0.8127108216285706
+i = 388, best alpha = 1.3580246913580247, best_ssim:0.8053508400917053
+i = 389, best alpha = 1.3580246913580247, best_ssim:0.7025920748710632
+i = 390, best alpha = 0.7407407407407408, best_ssim:0.7533020377159119
+i = 391, best alpha = 1.0, best_ssim:0.7694207429885864
+i = 392, best alpha = 1.0, best_ssim:0.3902432322502136
+i = 393, best alpha = 0.6666666666666666, best_ssim:0.6905611753463745
+i = 394, best alpha = 1.0, best_ssim:0.7699956893920898
+i = 395, best alpha = -0.33333333333333337, best_ssim:0.7626996636390686
+i = 396, best alpha = 1.0, best_ssim:0.6070542335510254
+i = 397, best alpha = 0.4074074074074074, best_ssim:0.7592417597770691
+i = 398, best alpha = 0.6666666666666666, best_ssim:0.8047958016395569
+i = 399, best alpha = 1.0617283950617284, best_ssim:0.8000150322914124
+i = 400, best alpha = 0.7407407407407408, best_ssim:0.6980894804000854
+i = 401, best alpha = 0.06172839506172839, best_ssim:0.733759343624115
+i = 402, best alpha = 1.0, best_ssim:0.7809780240058899
+i = 403, best alpha = 0.6666666666666666, best_ssim:0.797216534614563
+i = 404, best alpha = 0.33333333333333337, best_ssim:0.7967424392700195
+i = 405, best alpha = 0.3950617283950618, best_ssim:0.816116452217102
+i = 406, best alpha = 0.5061728395061729, best_ssim:0.7832955718040466
+i = 407, best alpha = 0.7037037037037037, best_ssim:0.8015292882919312
+i = 408, best alpha = 0.4444444444444445, best_ssim:0.8164784908294678
+i = 409, best alpha = 0.5925925925925928, best_ssim:0.7842323780059814
+i = 410, best alpha = -0.33333333333333337, best_ssim:0.9566183686256409
+i = 411, best alpha = 0.8888888888888891, best_ssim:0.9547981023788452
+i = 412, best alpha = 1.0, best_ssim:0.9472092986106873
+i = 413, best alpha = 0.8395061728395062, best_ssim:0.928307294845581
+i = 414, best alpha = 0.8395061728395062, best_ssim:0.931175708770752
+i = 415, best alpha = 1.1111111111111112, best_ssim:0.9138941764831543
+i = 416, best alpha = 0.1111111111111111, best_ssim:0.9286479353904724
+i = 417, best alpha = 1.0617283950617284, best_ssim:0.9288180470466614
+i = 418, best alpha = 0.0, best_ssim:0.8958885669708252
+i = 419, best alpha = 1.2592592592592593, best_ssim:0.917260468006134
+i = 420, best alpha = 1.0370370370370372, best_ssim:0.9432850480079651
+i = 421, best alpha = 1.6049382716049383, best_ssim:0.9247562289237976
+i = 422, best alpha = 0.5061728395061729, best_ssim:0.9387105107307434
+i = 423, best alpha = 1.308641975308642, best_ssim:0.9408732652664185
+i = 424, best alpha = 0.3580246913580247, best_ssim:0.9495624303817749
+i = 425, best alpha = 0.8395061728395062, best_ssim:0.9526010751724243
+i = 426, best alpha = 0.49382716049382724, best_ssim:0.8965448141098022
+i = 427, best alpha = 0.19753086419753094, best_ssim:0.7450825572013855
+i = 428, best alpha = 0.4074074074074074, best_ssim:0.7977983355522156
+i = 429, best alpha = 0.33333333333333337, best_ssim:0.7206920981407166
+i = 430, best alpha = 1.7037037037037037, best_ssim:0.8793631196022034
+i = 431, best alpha = 0.8888888888888891, best_ssim:0.7447038888931274
+i = 432, best alpha = 0.8888888888888891, best_ssim:0.8412410616874695
+i = 433, best alpha = 0.4074074074074074, best_ssim:0.8098762631416321
+i = 434, best alpha = 0.6666666666666666, best_ssim:0.8278992176055908
+i = 435, best alpha = 0.5061728395061729, best_ssim:0.8117614388465881
+i = 436, best alpha = 0.9382716049382717, best_ssim:0.8413909077644348
+i = 437, best alpha = 0.1111111111111111, best_ssim:0.7505173087120056
+i = 438, best alpha = 0.5061728395061729, best_ssim:0.6743175387382507
+i = 439, best alpha = 0.5555555555555556, best_ssim:0.7463764548301697
+i = 440, best alpha = 0.5925925925925928, best_ssim:0.66090327501297
+i = 441, best alpha = -0.037037037037037035, best_ssim:0.6162594556808472
+i = 442, best alpha = 0.8395061728395062, best_ssim:0.6748808026313782
+i = 443, best alpha = 0.4074074074074074, best_ssim:0.8257188200950623
+i = 444, best alpha = 0.5061728395061729, best_ssim:0.7476500272750854
+i = 445, best alpha = 0.33333333333333337, best_ssim:0.7942333817481995
+i = 446, best alpha = 0.8395061728395062, best_ssim:0.48539602756500244
+i = 447, best alpha = 1.5555555555555556, best_ssim:0.6240636110305786
+i = 448, best alpha = 0.49382716049382724, best_ssim:0.41359540820121765
+i = 449, best alpha = 0.6666666666666666, best_ssim:0.6453880667686462
+i = 450, best alpha = 0.4444444444444445, best_ssim:0.632932722568512
+i = 451, best alpha = 0.7407407407407408, best_ssim:0.680063784122467
+i = 452, best alpha = 1.0, best_ssim:0.6975591778755188
+i = 453, best alpha = -0.06172839506172839, best_ssim:0.6973105669021606
+i = 454, best alpha = 0.06172839506172839, best_ssim:0.7144172191619873
+i = 455, best alpha = 0.5555555555555556, best_ssim:0.6814369559288025
+i = 456, best alpha = 0.5555555555555556, best_ssim:0.8034971952438354
+i = 457, best alpha = 0.7407407407407408, best_ssim:0.7271689176559448
+i = 458, best alpha = -0.8024691358024691, best_ssim:0.7552413940429688
+i = 459, best alpha = 0.5061728395061729, best_ssim:0.8097676634788513
+i = 460, best alpha = 0.30864197530864196, best_ssim:0.5941091179847717
+i = 461, best alpha = 0.29629629629629634, best_ssim:0.6569375991821289
+i = 462, best alpha = 1.0370370370370372, best_ssim:0.8138508796691895
+i = 463, best alpha = 0.8395061728395062, best_ssim:0.6788941025733948
+i = 464, best alpha = 1.0, best_ssim:0.682245671749115
+i = 465, best alpha = 0.0, best_ssim:0.6974673271179199
+i = 466, best alpha = 1.0, best_ssim:0.7086489200592041
+i = 467, best alpha = 0.8641975308641975, best_ssim:0.6397965550422668
+i = 468, best alpha = 0.49382716049382724, best_ssim:0.7283576130867004
+i = 469, best alpha = 0.7407407407407408, best_ssim:0.8548598289489746
+i = 470, best alpha = 0.6913580246913581, best_ssim:0.8563593626022339
+i = 471, best alpha = 0.5925925925925928, best_ssim:0.8636962175369263
+i = 472, best alpha = 0.4074074074074074, best_ssim:0.9429634809494019
+i = 473, best alpha = 0.4444444444444445, best_ssim:0.9333782196044922
+i = 474, best alpha = 0.33333333333333337, best_ssim:0.8961027264595032
+i = 475, best alpha = 0.4074074074074074, best_ssim:0.8757270574569702
+i = 476, best alpha = 0.16049382716049382, best_ssim:0.8523863554000854
+i = 477, best alpha = -0.06172839506172839, best_ssim:0.8390223979949951
+i = 478, best alpha = 0.49382716049382724, best_ssim:0.8426395654678345
+i = 479, best alpha = 0.7407407407407408, best_ssim:0.9125460386276245
+i = 480, best alpha = 1.0, best_ssim:0.9158992171287537
+i = 481, best alpha = 0.6666666666666666, best_ssim:0.8441071510314941
+i = 482, best alpha = 0.25925925925925924, best_ssim:0.9088772535324097
+i = 483, best alpha = 1.0370370370370372, best_ssim:0.9092431664466858
+i = 484, best alpha = 0.0, best_ssim:0.8168282508850098
+i = 485, best alpha = 0.33333333333333337, best_ssim:0.6656795144081116
+i = 486, best alpha = 0.6913580246913581, best_ssim:0.8086010813713074
+i = 487, best alpha = 0.19753086419753094, best_ssim:0.8011372089385986
+i = 488, best alpha = 0.8888888888888891, best_ssim:0.6418525576591492
+i = 489, best alpha = 1.1111111111111112, best_ssim:0.7729206681251526
+i = 490, best alpha = 0.6419753086419754, best_ssim:0.5814740061759949
+i = 491, best alpha = 0.3580246913580247, best_ssim:0.5857089757919312
+i = 492, best alpha = 0.3950617283950618, best_ssim:0.9115824103355408
+i = 493, best alpha = 1.0, best_ssim:0.8809018135070801
+i = 494, best alpha = 0.33333333333333337, best_ssim:0.8626119494438171
+i = 495, best alpha = 0.49382716049382724, best_ssim:0.833472490310669
+i = 496, best alpha = 0.13580246913580252, best_ssim:0.7633354663848877
+i = 497, best alpha = 1.5555555555555556, best_ssim:0.7724558115005493
+i = 498, best alpha = 0.3580246913580247, best_ssim:0.7938866019248962
+i = 499, best alpha = 0.33333333333333337, best_ssim:0.8025097250938416
+i = 500, best alpha = 1.5061728395061729, best_ssim:0.856847882270813
+i = 501, best alpha = 1.0, best_ssim:0.8523091077804565
+i = 502, best alpha = 0.6666666666666666, best_ssim:0.836845338344574
+i = 503, best alpha = 0.6666666666666666, best_ssim:0.787446916103363
+i = 504, best alpha = 0.8888888888888891, best_ssim:0.5706923604011536
+i = 505, best alpha = 0.1111111111111111, best_ssim:0.6218863129615784
+i = 506, best alpha = 0.16049382716049382, best_ssim:0.6741056442260742
+i = 507, best alpha = 0.9382716049382717, best_ssim:0.8426326513290405
+i = 508, best alpha = 1.1604938271604939, best_ssim:0.90196692943573
+i = 509, best alpha = 0.6666666666666666, best_ssim:0.8259491920471191
+i = 510, best alpha = 0.962962962962963, best_ssim:0.8425790667533875
+i = 511, best alpha = 1.4074074074074074, best_ssim:0.8148151636123657
+i = 512, best alpha = 1.3333333333333335, best_ssim:0.7001886963844299
+i = 513, best alpha = 0.0, best_ssim:0.7875101566314697
+i = 514, best alpha = 1.0370370370370372, best_ssim:0.6623881459236145
+i = 515, best alpha = 1.5555555555555556, best_ssim:0.6246501803398132
+i = 516, best alpha = 0.8024691358024691, best_ssim:0.6542325615882874
+i = 517, best alpha = 0.8888888888888891, best_ssim:0.6353054642677307
+i = 518, best alpha = 0.5925925925925928, best_ssim:0.5974090099334717
+i = 519, best alpha = 0.4074074074074074, best_ssim:0.5930026173591614
+i = 520, best alpha = 1.0370370370370372, best_ssim:0.6635252833366394
+i = 521, best alpha = 0.8024691358024691, best_ssim:0.6528487801551819
+i = 522, best alpha = 1.1111111111111112, best_ssim:0.6274688243865967
+i = 523, best alpha = 0.6419753086419754, best_ssim:0.7404801249504089
+i = 524, best alpha = 0.8641975308641975, best_ssim:0.713444709777832
+i = 525, best alpha = 0.25925925925925924, best_ssim:0.6605820059776306
+i = 526, best alpha = 0.1111111111111111, best_ssim:0.749537467956543
+i = 527, best alpha = -0.33333333333333337, best_ssim:0.7291086912155151
+i = 528, best alpha = 0.6666666666666666, best_ssim:0.7524086833000183
+i = 529, best alpha = 1.8024691358024691, best_ssim:0.8292023539543152
+i = 530, best alpha = 1.3333333333333335, best_ssim:0.7883736491203308
+i = 531, best alpha = 0.7407407407407408, best_ssim:0.8061520457267761
+i = 532, best alpha = 1.1111111111111112, best_ssim:0.8742782473564148
+i = 533, best alpha = 0.6913580246913581, best_ssim:0.8953870534896851
+i = 534, best alpha = 1.0370370370370372, best_ssim:0.8720402121543884
+i = 535, best alpha = 1.0, best_ssim:0.9231324791908264
+i = 536, best alpha = 1.308641975308642, best_ssim:0.9264529943466187
+i = 537, best alpha = 0.6666666666666666, best_ssim:0.941654622554779
+i = 538, best alpha = 1.3333333333333335, best_ssim:0.9260727167129517
+i = 539, best alpha = 1.1111111111111112, best_ssim:0.6984264850616455
+i = 540, best alpha = 0.8888888888888891, best_ssim:0.798214852809906
+i = 541, best alpha = 1.2592592592592593, best_ssim:0.7868257164955139
+i = 542, best alpha = 0.9382716049382717, best_ssim:0.9359666109085083
+i = 543, best alpha = 0.6419753086419754, best_ssim:0.9007048606872559
+i = 544, best alpha = 0.49382716049382724, best_ssim:0.9163081049919128
+i = 545, best alpha = 1.0, best_ssim:0.9300325512886047
+i = 546, best alpha = 1.0, best_ssim:0.8834282755851746
+i = 547, best alpha = -0.5061728395061729, best_ssim:0.8609805107116699
+i = 548, best alpha = -0.1111111111111111, best_ssim:0.8460338115692139
+i = 549, best alpha = 0.30864197530864196, best_ssim:0.8529938459396362
+i = 550, best alpha = -0.1111111111111111, best_ssim:0.8945519924163818
+i = 551, best alpha = 1.308641975308642, best_ssim:0.671257734298706
+i = 552, best alpha = 0.4444444444444445, best_ssim:0.8014511466026306
+i = 553, best alpha = 0.1111111111111111, best_ssim:0.6680691838264465
+i = 554, best alpha = 0.0, best_ssim:0.6896250247955322
+i = 555, best alpha = 0.16049382716049382, best_ssim:0.6976089477539062
+i = 556, best alpha = 0.3950617283950618, best_ssim:0.8115047216415405
+i = 557, best alpha = 1.3580246913580247, best_ssim:0.7493907809257507
+i = 558, best alpha = 0.8395061728395062, best_ssim:0.7563944458961487
+i = 559, best alpha = 0.3580246913580247, best_ssim:0.8814640045166016
+i = 560, best alpha = 0.8888888888888891, best_ssim:0.9331212043762207
+i = 561, best alpha = 0.6419753086419754, best_ssim:0.9378757476806641
+i = 562, best alpha = 1.5555555555555556, best_ssim:0.9160828590393066
+i = 563, best alpha = 0.4074074074074074, best_ssim:0.9371725916862488
+i = 564, best alpha = 0.6913580246913581, best_ssim:0.9175280928611755
+i = 565, best alpha = 1.3580246913580247, best_ssim:0.8793869018554688
+i = 566, best alpha = 1.0, best_ssim:0.8579663038253784
+i = 567, best alpha = 1.1358024691358026, best_ssim:0.8522844314575195
+i = 568, best alpha = 0.1111111111111111, best_ssim:0.5500027537345886
+i = 569, best alpha = 0.33333333333333337, best_ssim:0.5774281620979309
+i = 570, best alpha = 0.25925925925925924, best_ssim:0.8340354561805725
+i = 571, best alpha = 0.4444444444444445, best_ssim:0.7814458608627319
+i = 572, best alpha = 0.0, best_ssim:0.8900008201599121
+i = 573, best alpha = 1.2592592592592593, best_ssim:0.8927794098854065
+i = 574, best alpha = 0.0, best_ssim:0.895984411239624
+i = 575, best alpha = 0.33333333333333337, best_ssim:0.845509946346283
+i = 576, best alpha = 0.7407407407407408, best_ssim:0.9274736642837524
+i = 577, best alpha = -0.06172839506172839, best_ssim:0.9254904985427856
+i = 578, best alpha = -0.16049382716049382, best_ssim:0.8499709963798523
+i = 579, best alpha = 0.33333333333333337, best_ssim:0.8428444862365723
+i = 580, best alpha = 1.0370370370370372, best_ssim:0.8156317472457886
+i = 581, best alpha = 0.7407407407407408, best_ssim:0.900456964969635
+i = 582, best alpha = -0.3580246913580247, best_ssim:0.8825538158416748
+i = 583, best alpha = 0.16049382716049382, best_ssim:0.8157147765159607
+i = 584, best alpha = 1.0, best_ssim:0.8756729364395142
+i = 585, best alpha = 0.16049382716049382, best_ssim:0.9105879664421082
+i = 586, best alpha = 1.308641975308642, best_ssim:0.8853054046630859
+i = 587, best alpha = 0.8888888888888891, best_ssim:0.8482920527458191
+i = 588, best alpha = 0.33333333333333337, best_ssim:0.8378949761390686
+i = 589, best alpha = 1.3333333333333335, best_ssim:0.9344659447669983
+i = 590, best alpha = 0.7407407407407408, best_ssim:0.9179306030273438
+i = 591, best alpha = 0.0, best_ssim:0.9003828167915344
+i = 592, best alpha = 0.4074074074074074, best_ssim:0.8300300240516663
+i = 593, best alpha = 0.5061728395061729, best_ssim:0.8301939964294434
+i = 594, best alpha = 0.5061728395061729, best_ssim:0.8250110149383545
+i = 595, best alpha = 0.7407407407407408, best_ssim:0.8180241584777832
+i = 596, best alpha = 0.3580246913580247, best_ssim:0.8280764222145081
+i = 597, best alpha = 1.3580246913580247, best_ssim:0.828181803226471
+i = 598, best alpha = 0.0, best_ssim:0.8119251132011414
+i = 599, best alpha = 0.33333333333333337, best_ssim:0.6271473169326782
+i = 600, best alpha = 0.6666666666666666, best_ssim:0.7713392972946167
+i = 601, best alpha = 0.25925925925925924, best_ssim:0.6740695834159851
+i = 602, best alpha = 0.8888888888888891, best_ssim:0.7366548776626587
+i = 603, best alpha = 0.4074074074074074, best_ssim:0.9380396604537964
+i = 604, best alpha = 1.0370370370370372, best_ssim:0.9305486679077148
+i = 605, best alpha = 1.3333333333333335, best_ssim:0.9226387143135071
+i = 606, best alpha = 1.1111111111111112, best_ssim:0.9259276390075684
+i = 607, best alpha = 1.1604938271604939, best_ssim:0.7511937022209167
+i = 608, best alpha = 1.3333333333333335, best_ssim:0.8668544292449951
+i = 609, best alpha = 1.0370370370370372, best_ssim:0.8270674347877502
+i = 610, best alpha = 0.7407407407407408, best_ssim:0.825553834438324
+i = 611, best alpha = 0.1111111111111111, best_ssim:0.907609224319458
+i = 612, best alpha = 0.33333333333333337, best_ssim:0.9435337781906128
+i = 613, best alpha = -0.25925925925925924, best_ssim:0.9220596551895142
+i = 614, best alpha = 0.1111111111111111, best_ssim:0.9162842631340027
+i = 615, best alpha = 0.29629629629629634, best_ssim:0.9051640033721924
+i = 616, best alpha = 0.8024691358024691, best_ssim:0.9021600484848022
+i = 617, best alpha = 1.1111111111111112, best_ssim:0.9159461855888367
+i = 618, best alpha = 0.8888888888888891, best_ssim:0.8920425772666931
+i = 619, best alpha = 1.1604938271604939, best_ssim:0.9110352396965027
+i = 620, best alpha = 0.9382716049382717, best_ssim:0.8639367818832397
+i = 621, best alpha = 0.6913580246913581, best_ssim:0.9122982621192932
+i = 622, best alpha = 1.6049382716049383, best_ssim:0.8639439344406128
+i = 623, best alpha = 0.8888888888888891, best_ssim:0.854245126247406
+i = 624, best alpha = 1.5555555555555556, best_ssim:0.9134121537208557
+i = 625, best alpha = 0.33333333333333337, best_ssim:0.8742621541023254
+i = 626, best alpha = 0.6419753086419754, best_ssim:0.90407395362854
+i = 627, best alpha = 1.0, best_ssim:0.603283166885376
+i = 628, best alpha = 1.0, best_ssim:0.7229391932487488
+i = 629, best alpha = 0.16049382716049382, best_ssim:0.5861988067626953
+i = 630, best alpha = 0.25925925925925924, best_ssim:0.6244520545005798
+i = 631, best alpha = 0.0, best_ssim:0.6681920289993286
+i = 632, best alpha = 0.8888888888888891, best_ssim:0.8327841758728027
+i = 633, best alpha = 0.33333333333333337, best_ssim:0.8358013033866882
+i = 634, best alpha = 0.33333333333333337, best_ssim:0.7811606526374817
+i = 635, best alpha = 1.7037037037037037, best_ssim:0.7846437096595764
+i = 636, best alpha = 1.7037037037037037, best_ssim:0.7836530804634094
+i = 637, best alpha = 0.8395061728395062, best_ssim:0.7897626757621765
+i = 638, best alpha = 1.0370370370370372, best_ssim:0.7733317017555237
+i = 639, best alpha = 0.49382716049382724, best_ssim:0.8020586967468262
+i = 640, best alpha = 0.8888888888888891, best_ssim:0.7502259016036987
+i = 641, best alpha = 0.3950617283950618, best_ssim:0.8106039762496948
+i = 642, best alpha = 0.49382716049382724, best_ssim:0.7422546744346619
+i = 643, best alpha = 0.037037037037037035, best_ssim:0.7084930539131165
+i = 644, best alpha = 1.0, best_ssim:0.7805030941963196
+i = 645, best alpha = 0.7407407407407408, best_ssim:0.7585471272468567
+i = 646, best alpha = 0.30864197530864196, best_ssim:0.727768063545227
+i = 647, best alpha = 0.8888888888888891, best_ssim:0.761730968952179
+i = 648, best alpha = 0.8395061728395062, best_ssim:0.7472182512283325
+i = 649, best alpha = 1.1604938271604939, best_ssim:0.6986929774284363
+i = 650, best alpha = 0.4444444444444445, best_ssim:0.7707265019416809
+i = 651, best alpha = 0.16049382716049382, best_ssim:0.7393374443054199
+i = 652, best alpha = 0.9382716049382717, best_ssim:0.5969330072402954
+i = 653, best alpha = 1.1358024691358026, best_ssim:0.5661537647247314
+i = 654, best alpha = -0.16049382716049382, best_ssim:0.5814288854598999
+i = 655, best alpha = 0.7407407407407408, best_ssim:0.702387273311615
+i = 656, best alpha = 0.6666666666666666, best_ssim:0.8828086256980896
+i = 657, best alpha = 0.5061728395061729, best_ssim:0.8230713605880737
+i = 658, best alpha = 0.5925925925925928, best_ssim:0.8205230832099915
+i = 659, best alpha = 0.5555555555555556, best_ssim:0.8568583726882935
+i = 660, best alpha = 1.0, best_ssim:0.8356509208679199
+i = 661, best alpha = 0.6913580246913581, best_ssim:0.8322681188583374
+i = 662, best alpha = 0.037037037037037035, best_ssim:0.8844844698905945
+i = 663, best alpha = 0.6913580246913581, best_ssim:0.8503391146659851
+i = 664, best alpha = 0.962962962962963, best_ssim:0.898439884185791
+i = 665, best alpha = 0.29629629629629634, best_ssim:0.8591628074645996
+i = 666, best alpha = 0.1111111111111111, best_ssim:0.8842493891716003
+i = 667, best alpha = 0.4074074074074074, best_ssim:0.884103000164032
+i = 668, best alpha = 0.33333333333333337, best_ssim:0.8703856468200684
+i = 669, best alpha = 0.9382716049382717, best_ssim:0.8523370027542114
+i = 670, best alpha = 0.6913580246913581, best_ssim:0.7698232531547546
+i = 671, best alpha = 0.4444444444444445, best_ssim:0.9009339809417725
+i = 672, best alpha = 0.4074074074074074, best_ssim:0.4690673053264618
+i = 673, best alpha = 0.7407407407407408, best_ssim:0.43916207551956177
+i = 674, best alpha = 0.6419753086419754, best_ssim:0.6431856751441956
+i = 675, best alpha = 0.16049382716049382, best_ssim:0.6913730502128601
+i = 676, best alpha = 0.8395061728395062, best_ssim:0.6167739033699036
+i = 677, best alpha = 0.3950617283950618, best_ssim:0.6395792961120605
+i = 678, best alpha = 1.1604938271604939, best_ssim:0.7104572653770447
+i = 679, best alpha = 0.6666666666666666, best_ssim:0.7745022177696228
+i = 680, best alpha = 0.7407407407407408, best_ssim:0.8184409737586975
+i = 681, best alpha = 0.25925925925925924, best_ssim:0.8161797523498535
+i = 682, best alpha = 0.8888888888888891, best_ssim:0.7984793782234192
+i = 683, best alpha = 0.5061728395061729, best_ssim:0.7901111245155334
+i = 684, best alpha = 0.13580246913580252, best_ssim:0.8005882501602173
+i = 685, best alpha = 1.0, best_ssim:0.8258349299430847
+i = 686, best alpha = 0.0, best_ssim:0.780977725982666
+i = 687, best alpha = 1.1358024691358026, best_ssim:0.7811778783798218
+i = 688, best alpha = 0.4074074074074074, best_ssim:0.811169445514679
+i = 689, best alpha = 0.06172839506172839, best_ssim:0.8438516855239868
+i = 690, best alpha = 0.4444444444444445, best_ssim:0.7624611854553223
+i = 691, best alpha = -0.7037037037037037, best_ssim:0.7552545666694641
+i = 692, best alpha = 0.33333333333333337, best_ssim:0.7400650978088379
+i = 693, best alpha = 0.1111111111111111, best_ssim:0.7217574715614319
+i = 694, best alpha = 0.4444444444444445, best_ssim:0.7166791558265686
+i = 695, best alpha = 0.7037037037037037, best_ssim:0.7485343813896179
+i = 696, best alpha = 0.16049382716049382, best_ssim:0.8096552491188049
+i = 697, best alpha = -0.33333333333333337, best_ssim:0.8279986381530762
+i = 698, best alpha = 0.3950617283950618, best_ssim:0.9490268230438232
+i = 699, best alpha = 0.8024691358024691, best_ssim:0.9451543092727661
+i = 700, best alpha = 0.5925925925925928, best_ssim:0.9484845399856567
+i = 701, best alpha = 0.16049382716049382, best_ssim:0.9368741512298584
+i = 702, best alpha = 1.3333333333333335, best_ssim:0.9265394806861877
+i = 703, best alpha = 0.4444444444444445, best_ssim:0.9284878373146057
+i = 704, best alpha = 0.7037037037037037, best_ssim:0.9249932765960693
+i = 705, best alpha = -0.25925925925925924, best_ssim:0.9153125882148743
+i = 706, best alpha = 0.33333333333333337, best_ssim:0.9210078120231628
+i = 707, best alpha = 0.49382716049382724, best_ssim:0.9096667766571045
+i = 708, best alpha = 1.0, best_ssim:0.8988248705863953
+i = 709, best alpha = 1.308641975308642, best_ssim:0.9350273013114929
+i = 710, best alpha = 1.5555555555555556, best_ssim:0.9378513693809509
+i = 711, best alpha = 0.5555555555555556, best_ssim:0.8358175158500671
+i = 712, best alpha = 0.30864197530864196, best_ssim:0.8910486698150635
+i = 713, best alpha = 0.5555555555555556, best_ssim:0.8301355242729187
+i = 714, best alpha = 0.06172839506172839, best_ssim:0.8995522260665894
+i = 715, best alpha = 1.1111111111111112, best_ssim:0.9531508088111877
+i = 716, best alpha = 0.33333333333333337, best_ssim:0.9291656613349915
+i = 717, best alpha = 1.7037037037037037, best_ssim:0.9278126358985901
+i = 718, best alpha = 1.0370370370370372, best_ssim:0.8671038150787354
+i = 719, best alpha = 0.8395061728395062, best_ssim:0.9251072406768799
+i = 720, best alpha = 1.5555555555555556, best_ssim:0.8017365336418152
+i = 721, best alpha = 0.1111111111111111, best_ssim:0.8988866806030273
+i = 722, best alpha = 1.4074074074074074, best_ssim:0.9282777905464172
+i = 723, best alpha = 0.8888888888888891, best_ssim:0.8882337212562561
+i = 724, best alpha = 0.8641975308641975, best_ssim:0.8445794582366943
+i = 725, best alpha = 1.6049382716049383, best_ssim:0.8744025230407715
+i = 726, best alpha = 1.1604938271604939, best_ssim:0.9064385890960693
+i = 727, best alpha = 0.0, best_ssim:0.897040605545044
+i = 728, best alpha = 1.5555555555555556, best_ssim:0.9060449600219727
+i = 729, best alpha = 0.9382716049382717, best_ssim:0.8069506883621216
+i = 730, best alpha = 0.4074074074074074, best_ssim:0.779060423374176
+i = 731, best alpha = 0.4444444444444445, best_ssim:0.8221377730369568
+i = 732, best alpha = 0.6666666666666666, best_ssim:0.9067502021789551
+i = 733, best alpha = 1.0, best_ssim:0.8556552529335022
+i = 734, best alpha = 0.4444444444444445, best_ssim:0.9354863166809082
+i = 735, best alpha = 0.6666666666666666, best_ssim:0.9355068206787109
+i = 736, best alpha = 0.8395061728395062, best_ssim:0.9523720145225525
+i = 737, best alpha = 1.1358024691358026, best_ssim:0.9682090282440186
+i = 738, best alpha = 1.2592592592592593, best_ssim:0.9583344459533691
+i = 739, best alpha = 0.8888888888888891, best_ssim:0.9290820360183716
+i = 740, best alpha = 0.7037037037037037, best_ssim:0.9165610671043396
+i = 741, best alpha = 1.0, best_ssim:0.8848708868026733
+i = 742, best alpha = 1.0, best_ssim:0.8952258229255676
+i = 743, best alpha = 0.30864197530864196, best_ssim:0.9354483485221863
+i = 744, best alpha = 1.2592592592592593, best_ssim:0.9550046920776367
+i = 745, best alpha = 0.7407407407407408, best_ssim:0.9557204246520996
+i = 746, best alpha = -0.1111111111111111, best_ssim:0.9463372230529785
+i = 747, best alpha = 1.0370370370370372, best_ssim:0.9339744448661804
+i = 748, best alpha = 0.0, best_ssim:0.9650002717971802
+i = 749, best alpha = 1.1604938271604939, best_ssim:0.9545155763626099
+i = 750, best alpha = -0.1111111111111111, best_ssim:0.9039806723594666
+i = 751, best alpha = 0.5555555555555556, best_ssim:0.9467397928237915
+i = 752, best alpha = 0.25925925925925924, best_ssim:0.9488558173179626
+i = 753, best alpha = 0.49382716049382724, best_ssim:0.9497029185295105
+i = 754, best alpha = 1.1358024691358026, best_ssim:0.9464401602745056
+i = 755, best alpha = 1.0, best_ssim:0.933209240436554
+i = 756, best alpha = 0.49382716049382724, best_ssim:0.962389349937439
+i = 757, best alpha = 0.8888888888888891, best_ssim:0.9196069836616516
+i = 758, best alpha = 0.962962962962963, best_ssim:0.955383837223053
+i = 759, best alpha = 1.3333333333333335, best_ssim:0.9159296751022339
+i = 760, best alpha = 0.8395061728395062, best_ssim:0.8647932410240173
+i = 761, best alpha = 0.7407407407407408, best_ssim:0.8577681183815002
+i = 762, best alpha = 0.4074074074074074, best_ssim:0.9375824332237244
+i = 763, best alpha = -0.33333333333333337, best_ssim:0.6038482785224915
+i = 764, best alpha = 0.6666666666666666, best_ssim:0.5790430903434753
+i = 765, best alpha = 0.0, best_ssim:0.6471846699714661
+i = 766, best alpha = 0.5061728395061729, best_ssim:0.672940731048584
+i = 767, best alpha = 0.6666666666666666, best_ssim:0.8051230311393738
+i = 768, best alpha = 0.8888888888888891, best_ssim:0.7704611420631409
+i = 769, best alpha = -0.33333333333333337, best_ssim:0.9363836646080017
+i = 770, best alpha = -0.8024691358024691, best_ssim:0.869176983833313
+i = 771, best alpha = 1.1111111111111112, best_ssim:0.7512072920799255
+i = 772, best alpha = 0.5555555555555556, best_ssim:0.9371764063835144
+i = 773, best alpha = 0.5555555555555556, best_ssim:0.9384281039237976
+i = 774, best alpha = 0.5925925925925928, best_ssim:0.9580506086349487
+i = 775, best alpha = 0.8888888888888891, best_ssim:0.9353858828544617
+i = 776, best alpha = 0.6666666666666666, best_ssim:0.942022442817688
+i = 777, best alpha = 0.33333333333333337, best_ssim:0.9509975910186768
+i = 778, best alpha = 0.5061728395061729, best_ssim:0.9111258387565613
+i = 779, best alpha = 0.25925925925925924, best_ssim:0.9054577350616455
+i = 780, best alpha = 0.5061728395061729, best_ssim:0.947944700717926
+i = 781, best alpha = 0.06172839506172839, best_ssim:0.914260983467102
+i = 782, best alpha = 0.5925925925925928, best_ssim:0.9388155937194824
+i = 783, best alpha = 0.6666666666666666, best_ssim:0.9367285370826721
+i = 784, best alpha = 1.0, best_ssim:0.9440225958824158
+i = 785, best alpha = 1.1111111111111112, best_ssim:0.8986220359802246
+i = 786, best alpha = 0.5555555555555556, best_ssim:0.8404790163040161
+i = 787, best alpha = 1.1111111111111112, best_ssim:0.8259344100952148
+i = 788, best alpha = 0.8888888888888891, best_ssim:0.8826844692230225
+i = 789, best alpha = 0.49382716049382724, best_ssim:0.802182674407959
+i = 790, best alpha = 0.8888888888888891, best_ssim:0.8710790276527405
+i = 791, best alpha = 0.962962962962963, best_ssim:0.8616459965705872
+i = 792, best alpha = 1.3333333333333335, best_ssim:0.8604205250740051
+i = 793, best alpha = 1.0, best_ssim:0.7974497079849243
+i = 794, best alpha = 1.1604938271604939, best_ssim:0.8556447625160217
+i = 795, best alpha = 1.0, best_ssim:0.8496676087379456
+i = 796, best alpha = 0.9382716049382717, best_ssim:0.8672734498977661
+i = 797, best alpha = 1.0, best_ssim:0.8550108075141907
+i = 798, best alpha = 1.0, best_ssim:0.7839716672897339
+i = 799, best alpha = 0.25925925925925924, best_ssim:0.8635574579238892
+i = 800, best alpha = 0.5925925925925928, best_ssim:0.7817597985267639
+i = 801, best alpha = 0.037037037037037035, best_ssim:0.8946487903594971
+i = 802, best alpha = -0.33333333333333337, best_ssim:0.7917540669441223
+i = 803, best alpha = 0.8888888888888891, best_ssim:0.8601323366165161
+i = 804, best alpha = 0.1111111111111111, best_ssim:0.8683640360832214
+i = 805, best alpha = 0.6666666666666666, best_ssim:0.9223416447639465
+i = 806, best alpha = 1.8024691358024691, best_ssim:0.8715901970863342
+i = 807, best alpha = 0.1111111111111111, best_ssim:0.8834056258201599
+i = 808, best alpha = 0.4444444444444445, best_ssim:0.9332579970359802
+i = 809, best alpha = 0.1111111111111111, best_ssim:0.936612606048584
+i = 810, best alpha = 0.3950617283950618, best_ssim:0.9208762645721436
+i = 811, best alpha = 0.4074074074074074, best_ssim:0.9375394582748413
+i = 812, best alpha = 1.3333333333333335, best_ssim:0.947704017162323
+i = 813, best alpha = 1.1604938271604939, best_ssim:0.9452201128005981
+i = 814, best alpha = 0.06172839506172839, best_ssim:0.8641951084136963
+i = 815, best alpha = -0.5555555555555556, best_ssim:0.9255046844482422
+i = 816, best alpha = 1.0, best_ssim:0.8640905022621155
+i = 817, best alpha = 0.7037037037037037, best_ssim:0.8551239371299744
+i = 818, best alpha = 0.7407407407407408, best_ssim:0.8926763534545898
+i = 819, best alpha = -0.037037037037037035, best_ssim:0.8937608599662781
+i = 820, best alpha = 0.30864197530864196, best_ssim:0.8311861753463745
+i = 821, best alpha = 0.0, best_ssim:0.9365403652191162
+i = 822, best alpha = 0.7407407407407408, best_ssim:0.8890379071235657
+i = 823, best alpha = 0.25925925925925924, best_ssim:0.9129976034164429
+i = 824, best alpha = 1.0, best_ssim:0.9072204828262329
+i = 825, best alpha = 0.1111111111111111, best_ssim:0.9050811529159546
+i = 826, best alpha = -0.1111111111111111, best_ssim:0.9298341870307922
+i = 827, best alpha = -0.5061728395061729, best_ssim:0.8858708143234253
+i = 828, best alpha = 0.1111111111111111, best_ssim:0.6853519082069397
+i = 829, best alpha = 1.3333333333333335, best_ssim:0.7708635926246643
+i = 830, best alpha = 0.49382716049382724, best_ssim:0.7240418791770935
+i = 831, best alpha = 0.5555555555555556, best_ssim:0.8021650314331055
+i = 832, best alpha = 0.3950617283950618, best_ssim:0.8415635824203491
+i = 833, best alpha = 0.25925925925925924, best_ssim:0.8348568081855774
+i = 834, best alpha = 0.8888888888888891, best_ssim:0.8219583034515381
+i = 835, best alpha = 0.0, best_ssim:0.7022232413291931
+i = 836, best alpha = 1.1604938271604939, best_ssim:0.44082388281822205
+i = 837, best alpha = 1.3580246913580247, best_ssim:0.684749186038971
+i = 838, best alpha = 1.8024691358024691, best_ssim:0.5972781181335449
+i = 839, best alpha = 0.6666666666666666, best_ssim:0.5440165400505066
+i = 840, best alpha = 1.0, best_ssim:0.43663445115089417
+i = 841, best alpha = 0.3950617283950618, best_ssim:0.41988736391067505
+i = 842, best alpha = -0.037037037037037035, best_ssim:0.41898903250694275
+i = 843, best alpha = 1.8024691358024691, best_ssim:0.5654818415641785
+i = 844, best alpha = 0.49382716049382724, best_ssim:0.4196264147758484
+i = 845, best alpha = -0.1111111111111111, best_ssim:0.48748257756233215
+i = 846, best alpha = 0.6666666666666666, best_ssim:0.46502774953842163
+i = 847, best alpha = 0.33333333333333337, best_ssim:0.5393676161766052
+i = 848, best alpha = 0.1111111111111111, best_ssim:0.5421490669250488
+i = 849, best alpha = 0.4444444444444445, best_ssim:0.8482533693313599
+i = 850, best alpha = 0.19753086419753094, best_ssim:0.8534632921218872
+i = 851, best alpha = 0.4444444444444445, best_ssim:0.8403233289718628
+i = 852, best alpha = 0.8888888888888891, best_ssim:0.8433256149291992
+i = 853, best alpha = 0.8888888888888891, best_ssim:0.7580046057701111
+i = 854, best alpha = 0.6049382716049383, best_ssim:0.807823657989502
+i = 855, best alpha = 0.8395061728395062, best_ssim:0.7572975754737854
+i = 856, best alpha = 0.16049382716049382, best_ssim:0.8577604293823242
+i = 857, best alpha = 1.5555555555555556, best_ssim:0.6872962713241577
+i = 858, best alpha = 0.25925925925925924, best_ssim:0.8304778337478638
+i = 859, best alpha = 0.4074074074074074, best_ssim:0.7853472828865051
+i = 860, best alpha = 0.6913580246913581, best_ssim:0.7649328708648682
+i = 861, best alpha = 1.4074074074074074, best_ssim:0.8383496403694153
+i = 862, best alpha = 0.30864197530864196, best_ssim:0.8004891276359558
+i = 863, best alpha = 0.8395061728395062, best_ssim:0.7898576259613037
+i = 864, best alpha = 0.8888888888888891, best_ssim:0.9086592197418213
+i = 865, best alpha = 0.33333333333333337, best_ssim:0.8250200748443604
+i = 866, best alpha = 1.308641975308642, best_ssim:0.9029631018638611
+i = 867, best alpha = 1.1358024691358026, best_ssim:0.7921789288520813
+i = 868, best alpha = 0.8888888888888891, best_ssim:0.6869685649871826
+i = 869, best alpha = 0.6666666666666666, best_ssim:0.786764919757843
+i = 870, best alpha = 1.4074074074074074, best_ssim:0.7932045459747314
+i = 871, best alpha = 0.8888888888888891, best_ssim:0.869249701499939
+i = 872, best alpha = 0.8024691358024691, best_ssim:0.860509991645813
+i = 873, best alpha = 0.33333333333333337, best_ssim:0.9085426330566406
+i = 874, best alpha = 0.9382716049382717, best_ssim:0.9089482426643372
+i = 875, best alpha = 0.6419753086419754, best_ssim:0.9076447486877441
+i = 876, best alpha = 0.0, best_ssim:0.9070243835449219
+i = 877, best alpha = 0.6666666666666666, best_ssim:0.6232078671455383
+i = 878, best alpha = -0.13580246913580252, best_ssim:0.7218917012214661
+i = 879, best alpha = 0.7407407407407408, best_ssim:0.5868580341339111
+i = 880, best alpha = 1.0, best_ssim:0.6763401031494141
+i = 881, best alpha = 0.962962962962963, best_ssim:0.7822681665420532
+i = 882, best alpha = 0.8888888888888891, best_ssim:0.7868063449859619
+i = 883, best alpha = 1.6049382716049383, best_ssim:0.8287638425827026
+i = 884, best alpha = 1.0370370370370372, best_ssim:0.8755372166633606
+i = 885, best alpha = 1.3333333333333335, best_ssim:0.8510811924934387
+i = 886, best alpha = 0.7407407407407408, best_ssim:0.8635146021842957
+i = 887, best alpha = 0.7037037037037037, best_ssim:0.907184362411499
+i = 888, best alpha = 1.0, best_ssim:0.8600262403488159
+i = 889, best alpha = 1.5061728395061729, best_ssim:0.8619037866592407
+i = 890, best alpha = 0.06172839506172839, best_ssim:0.8484740853309631
+i = 891, best alpha = 0.0, best_ssim:0.8914965987205505
+i = 892, best alpha = 0.6666666666666666, best_ssim:0.7631406784057617
+i = 893, best alpha = 1.3333333333333335, best_ssim:0.8608106374740601
+i = 894, best alpha = 1.1604938271604939, best_ssim:0.766647219657898
+i = 895, best alpha = 1.2592592592592593, best_ssim:0.7727227210998535
+i = 896, best alpha = 0.0, best_ssim:0.8270859718322754
+i = 897, best alpha = 0.06172839506172839, best_ssim:0.8336285948753357
+i = 898, best alpha = 0.8888888888888891, best_ssim:0.7899854183197021
+i = 899, best alpha = 0.8888888888888891, best_ssim:0.8122225403785706
+i = 900, best alpha = 0.1111111111111111, best_ssim:0.8101290464401245
+i = 901, best alpha = 0.8395061728395062, best_ssim:0.8649622797966003
+i = 902, best alpha = 0.9382716049382717, best_ssim:0.7373952865600586
+i = 903, best alpha = 0.9382716049382717, best_ssim:0.7996119260787964
+i = 904, best alpha = 0.6666666666666666, best_ssim:0.724994421005249
+i = 905, best alpha = 0.8888888888888891, best_ssim:0.8198772072792053
+i = 906, best alpha = 0.49382716049382724, best_ssim:0.7687721252441406
+i = 907, best alpha = 1.5555555555555556, best_ssim:0.811604380607605
+i = 908, best alpha = 0.6419753086419754, best_ssim:0.8222777843475342
+i = 909, best alpha = 0.7407407407407408, best_ssim:0.8783126473426819
+i = 910, best alpha = 1.1111111111111112, best_ssim:0.6706824898719788
+i = 911, best alpha = 0.4444444444444445, best_ssim:0.5654272437095642
+i = 912, best alpha = 0.8395061728395062, best_ssim:0.6631240248680115
+i = 913, best alpha = 0.49382716049382724, best_ssim:0.5983596444129944
+i = 914, best alpha = -0.16049382716049382, best_ssim:0.9152374267578125
+i = 915, best alpha = 0.8888888888888891, best_ssim:0.8179202675819397
+i = 916, best alpha = 1.0, best_ssim:0.7723035216331482
+i = 917, best alpha = 0.6419753086419754, best_ssim:0.8511377573013306
+i = 918, best alpha = 1.2592592592592593, best_ssim:0.9399611949920654
+i = 919, best alpha = 0.6666666666666666, best_ssim:0.9081580638885498
+i = 920, best alpha = 0.33333333333333337, best_ssim:0.9214707016944885
+i = 921, best alpha = 0.33333333333333337, best_ssim:0.8861356973648071
+i = 922, best alpha = 0.33333333333333337, best_ssim:0.9044440388679504
+i = 923, best alpha = 0.49382716049382724, best_ssim:0.9117249846458435
+i = 924, best alpha = 0.037037037037037035, best_ssim:0.9170823693275452
+i = 925, best alpha = 0.16049382716049382, best_ssim:0.8896373510360718
+i = 926, best alpha = -0.25925925925925924, best_ssim:0.9233630895614624
+i = 927, best alpha = 1.8024691358024691, best_ssim:0.9527368545532227
+i = 928, best alpha = 0.8395061728395062, best_ssim:0.9566735625267029
+i = 929, best alpha = 0.6666666666666666, best_ssim:0.9495086669921875
+i = 930, best alpha = 0.6666666666666666, best_ssim:0.968542218208313
+i = 931, best alpha = 0.1111111111111111, best_ssim:0.9246402382850647
+i = 932, best alpha = 0.1111111111111111, best_ssim:0.94190913438797
+i = 933, best alpha = -0.1111111111111111, best_ssim:0.9360071420669556
+i = 934, best alpha = 0.5555555555555556, best_ssim:0.9009720683097839
+i = 935, best alpha = 0.16049382716049382, best_ssim:0.8021552562713623
+i = 936, best alpha = -0.5061728395061729, best_ssim:0.8745258450508118
+i = 937, best alpha = 0.7407407407407408, best_ssim:0.9188986420631409
+i = 938, best alpha = 0.1111111111111111, best_ssim:0.9228651523590088
+i = 939, best alpha = -0.25925925925925924, best_ssim:0.8995504379272461
+i = 940, best alpha = 0.33333333333333337, best_ssim:0.8962845802307129
+i = 941, best alpha = 0.4444444444444445, best_ssim:0.7741987705230713
+i = 942, best alpha = -0.037037037037037035, best_ssim:0.8504769206047058
+i = 943, best alpha = 1.0370370370370372, best_ssim:0.791008472442627
+i = 944, best alpha = 1.6049382716049383, best_ssim:0.73148113489151
+i = 945, best alpha = 0.6666666666666666, best_ssim:0.8575108051300049
+i = 946, best alpha = -0.33333333333333337, best_ssim:0.9207475781440735
+i = 947, best alpha = 1.1604938271604939, best_ssim:0.8970067501068115
+i = 948, best alpha = 0.5061728395061729, best_ssim:0.8967003226280212
+i = 949, best alpha = 0.3580246913580247, best_ssim:0.9174432754516602
+i = 950, best alpha = 0.25925925925925924, best_ssim:0.6213749647140503
+i = 951, best alpha = 0.4444444444444445, best_ssim:0.8772943019866943
+i = 952, best alpha = 0.30864197530864196, best_ssim:0.8114013075828552
+i = 953, best alpha = 1.0, best_ssim:0.7909947037696838
+i = 954, best alpha = 0.13580246913580252, best_ssim:0.6407594680786133
+i = 955, best alpha = 0.8395061728395062, best_ssim:0.5974026918411255
+i = 956, best alpha = 1.1111111111111112, best_ssim:0.9399389624595642
+i = 957, best alpha = 0.7407407407407408, best_ssim:0.9148767590522766
+i = 958, best alpha = 1.3333333333333335, best_ssim:0.5731045007705688
+i = 959, best alpha = 0.7407407407407408, best_ssim:0.8041934370994568
+i = 960, best alpha = 0.6666666666666666, best_ssim:0.7807827591896057
+i = 961, best alpha = 0.7407407407407408, best_ssim:0.6743918657302856
+i = 962, best alpha = 0.25925925925925924, best_ssim:0.7810771465301514
+i = 963, best alpha = 0.6419753086419754, best_ssim:0.5898287892341614
+i = 964, best alpha = 1.1111111111111112, best_ssim:0.6561651229858398
+i = 965, best alpha = 1.0, best_ssim:0.5147444605827332
+i = 966, best alpha = 0.7407407407407408, best_ssim:0.7380471229553223
+i = 967, best alpha = 1.0, best_ssim:0.8262887001037598
+i = 968, best alpha = 0.7407407407407408, best_ssim:0.682559609413147
+i = 969, best alpha = -0.13580246913580252, best_ssim:0.7935912013053894
+i = 970, best alpha = 0.1111111111111111, best_ssim:0.7546645402908325
+i = 971, best alpha = 1.0, best_ssim:0.9447678923606873
+i = 972, best alpha = 0.037037037037037035, best_ssim:0.9438351392745972
+i = 973, best alpha = 1.0617283950617284, best_ssim:0.9220563769340515
+i = 974, best alpha = 0.30864197530864196, best_ssim:0.8912588953971863
+i = 975, best alpha = 0.7407407407407408, best_ssim:0.6652233600616455
+i = 976, best alpha = 1.1111111111111112, best_ssim:0.7007735371589661
+i = 977, best alpha = 1.0370370370370372, best_ssim:0.4909745454788208
+i = 978, best alpha = 1.5555555555555556, best_ssim:0.3756251335144043
+i = 979, best alpha = 1.0, best_ssim:0.6325510144233704
+i = 980, best alpha = 1.0370370370370372, best_ssim:0.6967266201972961
+i = 981, best alpha = 1.4074074074074074, best_ssim:0.5446873903274536
+i = 982, best alpha = 1.8024691358024691, best_ssim:0.4923799932003021
+i = 983, best alpha = 1.3333333333333335, best_ssim:0.4385327994823456
+i = 984, best alpha = 0.6666666666666666, best_ssim:0.41562342643737793
+i = 985, best alpha = 0.962962962962963, best_ssim:0.41889041662216187
+i = 986, best alpha = -0.1111111111111111, best_ssim:0.38732922077178955
+i = 987, best alpha = -0.037037037037037035, best_ssim:0.6915575861930847
+i = 988, best alpha = 0.0, best_ssim:0.6268279552459717
+i = 989, best alpha = -0.25925925925925924, best_ssim:0.3265240788459778
+i = 990, best alpha = 1.3333333333333335, best_ssim:0.620059072971344
+i = 991, best alpha = 1.3580246913580247, best_ssim:0.6434985399246216
+i = 992, best alpha = -0.7037037037037037, best_ssim:0.6533740162849426
+i = 993, best alpha = 1.2592592592592593, best_ssim:0.5435160994529724
+i = 994, best alpha = 1.3333333333333335, best_ssim:0.9005053043365479
+i = 995, best alpha = -0.33333333333333337, best_ssim:0.8320873379707336
+i = 996, best alpha = 0.037037037037037035, best_ssim:0.7839403748512268
+i = 997, best alpha = 1.0, best_ssim:0.7950130105018616
+i = 998, best alpha = 0.25925925925925924, best_ssim:0.6363407969474792
+i = 999, best alpha = 0.8395061728395062, best_ssim:0.6776695847511292
+i = 1000, best alpha = 0.0, best_ssim:0.5567135810852051
+i = 1001, best alpha = 1.8024691358024691, best_ssim:0.688420295715332
+i = 1002, best alpha = 0.5925925925925928, best_ssim:0.812819242477417
+i = 1003, best alpha = 1.1111111111111112, best_ssim:0.7840291261672974
+i = 1004, best alpha = 0.9382716049382717, best_ssim:0.8761677742004395
+i = 1005, best alpha = 0.8395061728395062, best_ssim:0.8962792158126831
+i = 1006, best alpha = 1.0, best_ssim:0.8930477499961853
+i = 1007, best alpha = 1.7037037037037037, best_ssim:0.7925662994384766
+i = 1008, best alpha = 0.6666666666666666, best_ssim:0.7032880187034607
+i = 1009, best alpha = -0.8024691358024691, best_ssim:0.7446479797363281
+i = 1010, best alpha = 0.1111111111111111, best_ssim:0.7057210803031921
+i = 1011, best alpha = 0.4074074074074074, best_ssim:0.7294901609420776
+i = 1012, best alpha = 0.0, best_ssim:0.6888953447341919
+i = 1013, best alpha = 0.33333333333333337, best_ssim:0.686035692691803
+i = 1014, best alpha = -0.5555555555555556, best_ssim:0.6303005218505859
+i = 1015, best alpha = 1.3333333333333335, best_ssim:0.7902951836585999
+i = 1016, best alpha = 0.8888888888888891, best_ssim:0.6974441409111023
+i = 1017, best alpha = 1.0, best_ssim:0.8086042404174805
+i = 1018, best alpha = 0.4074074074074074, best_ssim:0.8918725252151489
+i = 1019, best alpha = 1.1111111111111112, best_ssim:0.8848928213119507
+i = 1020, best alpha = 0.7407407407407408, best_ssim:0.7988396883010864
+i = 1021, best alpha = 0.0, best_ssim:0.9273037910461426
+i = 1022, best alpha = 0.6666666666666666, best_ssim:0.9382164478302002
+i = 1023, best alpha = 1.0, best_ssim:0.920997679233551
+i = 1024, best alpha = 0.0, best_ssim:0.7994589805603027
+i = 1025, best alpha = 0.8395061728395062, best_ssim:0.7829299569129944
+i = 1026, best alpha = 0.037037037037037035, best_ssim:0.8350009322166443
+i = 1027, best alpha = 0.8641975308641975, best_ssim:0.8772976994514465
+i = 1028, best alpha = 0.4444444444444445, best_ssim:0.8171737194061279
+i = 1029, best alpha = 1.0370370370370372, best_ssim:0.9540458917617798
+i = 1030, best alpha = 1.2592592592592593, best_ssim:0.6116202473640442
+i = 1031, best alpha = 1.0, best_ssim:0.598870575428009
+i = 1032, best alpha = -0.8024691358024691, best_ssim:0.6843316555023193
+i = 1033, best alpha = 1.4074074074074074, best_ssim:0.2201465368270874
+i = 1034, best alpha = 0.0, best_ssim:0.5849148035049438
+i = 1035, best alpha = 0.8395061728395062, best_ssim:0.47756171226501465
+i = 1036, best alpha = 1.1604938271604939, best_ssim:0.6988888382911682
+i = 1037, best alpha = -0.5555555555555556, best_ssim:0.5576157569885254
+i = 1038, best alpha = 0.5555555555555556, best_ssim:0.732430100440979
+i = 1039, best alpha = 0.8395061728395062, best_ssim:0.8108530044555664
+i = 1040, best alpha = 0.5925925925925928, best_ssim:0.9127535223960876
+i = 1041, best alpha = -0.33333333333333337, best_ssim:0.9160322546958923
+i = 1042, best alpha = -0.06172839506172839, best_ssim:0.9033382534980774
+i = 1043, best alpha = 0.6666666666666666, best_ssim:0.9703856110572815
+i = 1044, best alpha = 0.8888888888888891, best_ssim:0.9741351008415222
+i = 1045, best alpha = 1.8024691358024691, best_ssim:0.6271955966949463
+i = 1046, best alpha = 0.4444444444444445, best_ssim:0.9068008065223694
+i = 1047, best alpha = 0.6666666666666666, best_ssim:0.9578506350517273
+i = 1048, best alpha = 0.5925925925925928, best_ssim:0.9464033842086792
+i = 1049, best alpha = 1.0, best_ssim:0.9692582488059998
+i = 1050, best alpha = -0.06172839506172839, best_ssim:0.7018709778785706
+i = 1051, best alpha = 0.6666666666666666, best_ssim:0.49733054637908936
+i = 1052, best alpha = 0.3950617283950618, best_ssim:0.5021891593933105
+i = 1053, best alpha = 1.0617283950617284, best_ssim:0.319999635219574
+i = 1054, best alpha = 1.3333333333333335, best_ssim:0.5624096989631653
+i = 1055, best alpha = 1.1111111111111112, best_ssim:0.5439566969871521
+i = 1056, best alpha = 0.8888888888888891, best_ssim:0.6401166915893555
+i = 1057, best alpha = 1.5555555555555556, best_ssim:0.5401250720024109
+i = 1058, best alpha = -0.33333333333333337, best_ssim:0.46708086133003235
+i = 1059, best alpha = -0.7037037037037037, best_ssim:0.4944978654384613
+i = 1060, best alpha = -0.13580246913580252, best_ssim:0.7167972922325134
+i = 1061, best alpha = 1.1358024691358026, best_ssim:0.9324430823326111
+i = 1062, best alpha = 0.4074074074074074, best_ssim:0.9228540658950806
+i = 1063, best alpha = 1.8024691358024691, best_ssim:0.7665650248527527
+i = 1064, best alpha = 0.8641975308641975, best_ssim:0.8339167833328247
+i = 1065, best alpha = -0.037037037037037035, best_ssim:0.8700752258300781
+i = 1066, best alpha = 1.1604938271604939, best_ssim:0.806207537651062
+i = 1067, best alpha = 0.4074074074074074, best_ssim:0.9450480937957764
+i = 1068, best alpha = 0.33333333333333337, best_ssim:0.9438684582710266
+i = 1069, best alpha = 0.7037037037037037, best_ssim:0.8192363977432251
+i = 1070, best alpha = -0.1111111111111111, best_ssim:0.8817723989486694
+i = 1071, best alpha = -0.1111111111111111, best_ssim:0.5315715074539185
+i = 1072, best alpha = 1.0617283950617284, best_ssim:0.7581781148910522
+i = 1073, best alpha = 0.1111111111111111, best_ssim:0.8569897413253784
+i = 1074, best alpha = 1.7037037037037037, best_ssim:0.8988378047943115
+i = 1075, best alpha = 1.8024691358024691, best_ssim:0.9096381068229675
+i = 1076, best alpha = 0.6049382716049383, best_ssim:0.859041154384613
+i = 1077, best alpha = 0.33333333333333337, best_ssim:0.6549937129020691
+i = 1078, best alpha = 0.6913580246913581, best_ssim:0.637893795967102
+i = 1079, best alpha = 0.4074074074074074, best_ssim:0.5208080410957336
+i = 1080, best alpha = 1.8024691358024691, best_ssim:0.7720655798912048
+i = 1081, best alpha = 1.0617283950617284, best_ssim:0.8337218165397644
+i = 1082, best alpha = 1.0617283950617284, best_ssim:0.7360048294067383
+i = 1083, best alpha = -0.33333333333333337, best_ssim:0.7826484441757202
+i = 1084, best alpha = -0.25925925925925924, best_ssim:0.851152241230011
+i = 1085, best alpha = 1.0370370370370372, best_ssim:0.4700956344604492
+i = 1086, best alpha = 1.1111111111111112, best_ssim:0.4074733257293701
+i = 1087, best alpha = 0.49382716049382724, best_ssim:0.45462536811828613
+i = 1088, best alpha = 0.7407407407407408, best_ssim:0.5210120677947998
+i = 1089, best alpha = 0.8641975308641975, best_ssim:0.3875308930873871
+i = 1090, best alpha = 1.4074074074074074, best_ssim:0.7528770565986633
+i = 1091, best alpha = 0.16049382716049382, best_ssim:0.6699210405349731
+i = 1092, best alpha = -0.1111111111111111, best_ssim:0.5962198972702026
+i = 1093, best alpha = 1.3333333333333335, best_ssim:0.6661661267280579
+i = 1094, best alpha = 1.1111111111111112, best_ssim:0.7609466314315796
+i = 1095, best alpha = 1.2592592592592593, best_ssim:0.7566378116607666
+i = 1096, best alpha = 0.962962962962963, best_ssim:0.5299403667449951
+i = 1097, best alpha = -0.06172839506172839, best_ssim:0.8104718327522278
+i = 1098, best alpha = 0.8395061728395062, best_ssim:0.9298517107963562
+i = 1099, best alpha = 1.2592592592592593, best_ssim:0.9079276919364929
+i = 1100, best alpha = 0.30864197530864196, best_ssim:0.49033603072166443
+i = 1101, best alpha = 0.6666666666666666, best_ssim:0.7811151742935181
+i = 1102, best alpha = 0.30864197530864196, best_ssim:0.8146904706954956
+i = 1103, best alpha = 0.4074074074074074, best_ssim:0.8091080188751221
+i = 1104, best alpha = 0.8888888888888891, best_ssim:0.9019958972930908
+i = 1105, best alpha = 0.6419753086419754, best_ssim:0.8605628609657288
+top 30% 29.921793
+top 30~60% 24.95519
+top 60~100% 20.595434
+average psnr: 24.69902
+top 30% 0.92638874
+top 30~60% 0.84496814
+top 60~100% 0.6717298
+average ssim: 0.8000622
+per-sample metrics: /workspace/python_pro/test1/RopStitch/experiments/measurements/per_sample_metrics.csv
+per-sample measurements: /workspace/python_pro/test1/RopStitch/experiments/measurements/per_sample_measurements.csv
+measurement summary: /workspace/python_pro/test1/RopStitch/experiments/measurements/summary.json
+##################end testing#######################

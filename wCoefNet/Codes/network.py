@@ -425,6 +425,14 @@ def build_output_model(net, coef_net, input1_tensor, input2_tensor, alpha=0.5, m
     out_dict = {}
     out_dict.update(output_ref=output_ref, output_tgt = output_tgt)
     out_dict.update(DDM_ref=DDM_ref, DDM_tgt = DDM_tgt)
+    out_dict.update(
+        final_cdec=final_coef_list[-1],
+        mesh_ref=mesh_ref,
+        mesh_tgt=mesh_tgt,
+        rigid_mesh=rigid_mesh,
+        out_height=int(out_height.item() if isinstance(out_height, torch.Tensor) else out_height),
+        out_width=int(out_width.item() if isinstance(out_width, torch.Tensor) else out_width),
+    )
 
     return out_dict, True
 
