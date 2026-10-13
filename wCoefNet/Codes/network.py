@@ -242,15 +242,19 @@ def data_aug(img1, img2):
     return img1_aug, img2_aug
 
 
-def build_model(net, coef_net, input1_tensor, input2_tensor, is_training = True):
+def build_model(net, coef_net, input1_tensor, input2_tensor, is_training = True, enable_tps_grad=False):
     batch_size, _, img_h, img_w = input1_tensor.size()
     alpha = torch.rand((batch_size, 2, 1, 1)).cuda()
     # network
     if is_training == True:
         aug_input1_tensor, aug_input2_tensor = data_aug(input1_tensor, input2_tensor)
-        dst_p_ref_list, dst_p_tgt_list, final_coef_list, mesh_ref, mesh_tgt = net(aug_input1_tensor, aug_input2_tensor, coef_net, alpha)
+        dst_p_ref_list, dst_p_tgt_list, final_coef_list, mesh_ref, mesh_tgt = net(
+            aug_input1_tensor, aug_input2_tensor, coef_net, alpha, enable_tps_grad=enable_tps_grad
+        )
     else:
-        dst_p_ref_list, dst_p_tgt_list, final_coef_list, mesh_ref, mesh_tgt = net(input1_tensor, input2_tensor, coef_net, alpha)
+        dst_p_ref_list, dst_p_tgt_list, final_coef_list, mesh_ref, mesh_tgt = net(
+            input1_tensor, input2_tensor, coef_net, alpha, enable_tps_grad=enable_tps_grad
+        )
 
     DDM_ref_list = []
     DDM_tgt_list = []
@@ -263,26 +267,23 @@ def build_model(net, coef_net, input1_tensor, input2_tensor, is_training = True)
         DDM_tgt_list.append(DDM_tgt)
         DDM_ref_list.append(DDM_ref)
 
-    #############################################################
-
-    ##### stage 2 ####
-    # Do not use the following code to save GPU memory.
-
-    # rigid_mesh = get_rigid_mesh(batch_size, img_h, img_w)
-    # norm_rigid_mesh = get_norm_mesh(rigid_mesh, img_h, img_w)
-    # norm_mesh_ref = get_norm_mesh(mesh_ref, img_h, img_w)
-    # norm_mesh_tgt = get_norm_mesh(mesh_tgt, img_h, img_w)
-
-    # mask = torch.ones_like(input2_tensor).cuda()
-    # output_tps_ref = torch_tps_transform.transformer(torch.cat((input1_tensor, mask), 1), norm_mesh_ref, norm_rigid_mesh, (img_h, img_w))
-    # output_tps_tgt = torch_tps_transform.transformer(torch.cat((input2_tensor, mask), 1), norm_mesh_tgt, norm_rigid_mesh, (img_h, img_w))
+    rigid_mesh = get_rigid_mesh(batch_size, img_h, img_w)
 
     out_dict = {}
-    # out_dict.update(output_tps_ref = output_tps_ref, mesh_ref = mesh_ref)
-    # out_dict.update(output_tps_tgt = output_tps_tgt, mesh_tgt = mesh_tgt)
     out_dict.update(mesh_ref = mesh_ref)
     out_dict.update(mesh_tgt = mesh_tgt)
+    out_dict.update(rigid_mesh = rigid_mesh)
     out_dict.update(DDM_ref_list=DDM_ref_list, DDM_tgt_list=DDM_tgt_list)
+    out_dict.update(final_coef_list=final_coef_list)
+
+    if enable_tps_grad:
+        norm_rigid_mesh = get_norm_mesh(rigid_mesh, img_h, img_w)
+        norm_mesh_ref = get_norm_mesh(mesh_ref, img_h, img_w)
+        norm_mesh_tgt = get_norm_mesh(mesh_tgt, img_h, img_w)
+        mask = torch.ones_like(input2_tensor).cuda()
+        output_tps_ref = torch_tps_transform.transformer(torch.cat((input1_tensor+1, mask), 1), norm_mesh_ref, norm_rigid_mesh, (img_h, img_w))
+        output_tps_tgt = torch_tps_transform.transformer(torch.cat((input2_tensor+1, mask), 1), norm_mesh_tgt, norm_rigid_mesh, (img_h, img_w))
+        out_dict.update(output_tps_ref=output_tps_ref, output_tps_tgt=output_tps_tgt)
 
     return out_dict
 
@@ -753,7 +754,7 @@ class Network(nn.Module):
         #-----------------------------------------
 
     # forward
-    def forward(self, input1_tesnor, input2_tesnor, coef_net, alpha=0.5):
+    def forward(self, input1_tesnor, input2_tesnor, coef_net, alpha=0.5, enable_tps_grad=False):
         batch_size, _, img_h, img_w = input1_tesnor.size()
 
         with torch.no_grad():
@@ -770,8 +771,8 @@ class Network(nn.Module):
             offset_1 = self.regressHomo_part2(temp_1)
 
         # homo decomposition
-        H_motion_1 = offset_1.reshape(-1, 4, 2)                                 # newly added
-        dst_p_ref_list, dst_p_tgt_list,final_coef_list = coef_net(input1_tesnor, input2_tesnor, H_motion_1)        # newly added
+        H_motion_1 = offset_1.reshape(-1, 4, 2)
+        dst_p_ref_list, dst_p_tgt_list, final_coef_list = coef_net(input1_tesnor, input2_tesnor, H_motion_1)
         dst_p_ref = dst_p_ref_list[-1]
         dst_p_tgt = dst_p_tgt_list[-1]
         final_coef = final_coef_list[-1]
@@ -787,10 +788,8 @@ class Network(nn.Module):
         ini_mesh_tgt = H2Mesh(H_tgt, rigid_mesh)
 
         # for feature offset and warp
-        #H = torch_DLT.Tensor_ACA_rect(src_p/8, dst_p/8)
         H_ref_feat = torch_DLT.Tensor_ACA_rect(src_p/8, dst_p_ref/8)
         H_tgt_feat = torch_DLT.Tensor_ACA_rect(src_p/8, dst_p_tgt/8)
-        # H_ref = torch.matmul(torch.inverse(H), H_tgt)
 
         M_tensor = torch.tensor([[img_w/8 / 2.0, 0., img_w/8 / 2.0],
                       [0., img_h/8 / 2.0, img_h/8 / 2.0],
@@ -806,25 +805,28 @@ class Network(nn.Module):
         warp_feature_2_64_tgt = torch_homo_transform.transformer(active_feature_2_64, H_mat_tgt, (int(img_h/8), int(img_w/8)))
 
         ######### stage 2
-        with torch.no_grad():
-            # for img1
-            # img1_correlation_64 = self.cost_volume(warp_feature_2_64_tgt, warp_feature_1_64_ref, search_range=5, norm=False)
+        def _calc_tps_motion():
             img1_temp_2 = self.regressTPS_part1(torch.cat([warp_feature_1_64_ref, warp_feature_2_64_tgt], 1))
             img1_temp_2 = img1_temp_2.reshape(img1_temp_2.size()[0], -1)
             offset_2_ref = self.regressTPS_part2(img1_temp_2)
-            # for img2
-            # img2_correlation_64 = self.cost_volume(warp_feature_1_64_ref, warp_feature_2_64_tgt, search_range=5, norm=False)
+
             img2_temp_2 = self.regressTPS_part1(torch.cat([warp_feature_2_64_tgt, warp_feature_1_64_ref], 1))
             img2_temp_2 = img2_temp_2.reshape(img2_temp_2.size()[0], -1)
             offset_2_tgt = self.regressTPS_part2(img2_temp_2)
-            # post process
+
             mesh_motion_ref = offset_2_ref.reshape(-1, grid_h+1, grid_w+1, 2)
             mesh_motion_tgt = offset_2_tgt.reshape(-1, grid_h+1, grid_w+1, 2)
             mesh_ref = ini_mesh_ref + mesh_motion_ref
             mesh_tgt = ini_mesh_tgt + mesh_motion_tgt
+            return mesh_ref, mesh_tgt
 
+        if enable_tps_grad:
+            mesh_ref, mesh_tgt = _calc_tps_motion()
+        else:
+            with torch.no_grad():
+                mesh_ref, mesh_tgt = _calc_tps_motion()
 
-        return dst_p_ref_list, dst_p_tgt_list, final_coef_list,  mesh_ref, mesh_tgt
+        return dst_p_ref_list, dst_p_tgt_list, final_coef_list, mesh_ref, mesh_tgt
 
         # forward
     def forward_finetune(self, input1_tesnor, input2_tesnor, coef_net, alpha=0.5):
