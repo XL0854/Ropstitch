@@ -1,0 +1,12 @@
+Metric,Single_Forward_s,Ternary_Search_s
+Sample_Count,1105,1105
+Mean,0.1187,1.1687
+Median,0.1155,1.1378
+Min,0.0951,0.9133
+Max,0.2347,2.2263
+Std,0.0147,0.1565
+Equivalent_FPS,8.42,0.85
+Hardware,NVIDIA GeForce RTX 4090 (24GB),NVIDIA GeForce RTX 4090 (24GB)
+Dataset,UDIS-D Testing (512x512),UDIS-D Testing (512x512)
+Measurement_Script,wCoefNet/Codes/test.py,wCoefNet/Codes/test.py
+Data_Evidence,experiments/measurements/per_sample_measurements.csv,experiments/measurements/per_sample_measurements.csv

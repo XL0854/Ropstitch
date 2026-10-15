@@ -1,0 +1,24 @@
+Category,Metric,Baseline_B0,M1_Mesh_Supervision,M2_Spatial_Feedback,Unit_Notes
+Photometric,PSNR_Average,24.699020,24.599136,24.570520,dB (1105 genuine pairs)
+Photometric,PSNR_Easy,29.921793,29.824579,29.868908,dB
+Photometric,PSNR_Moderate,24.955190,24.876783,24.830170,dB
+Photometric,PSNR_Hard,20.595434,20.477413,20.407700,dB
+Photometric,SSIM_Average,0.800062,0.796805,0.794175,Range [0-1]
+Photometric,SSIM_Easy,0.926389,0.925308,0.925546,Range [0-1]
+Photometric,SSIM_Moderate,0.844968,0.843927,0.841961,Range [0-1]
+Photometric,SSIM_Hard,0.671730,0.665177,0.659903,Range [0-1]
+Topology,Folding_Ratio,0.000%,0.000%,0.000%,Strictly 0 folding
+Topology,Degenerate_Ratio,0.000%,0.000%,0.000%,Strictly 0 degenerate cells
+Topology,Effective_Coverage,93.07%,93.46%,88.93%,Effective field of view coverage
+Topology,Stretch_Mean,0.0355,0.0641,0.0649,Relative mesh stretch
+Topology,Bending_Degree,0.0159,0.0168,0.0195,Discrete curvature
+Inference_Time,Single_Forward_Mean_s,0.1187,0.1111,0.1287,Fixed plane (8.4 vs 9.0 vs 7.8 FPS)
+Inference_Time,Single_Forward_Median_s,0.1155,0.1082,0.1254,Fixed plane median
+Inference_Time,Ternary_Search_Mean_s,1.1687,1.0737,1.2912,Full optimal plane search
+Inference_Time,Ternary_Search_Median_s,1.1378,1.0425,1.2640,Search median
+Inference_Time,Total_1105_Pairs_min,21.5,19.8,23.8,Batch evaluation throughput
+Training_Time,Epoch_Train_Time_min,11.3,11.3,10.7,Per epoch (RTX 4090 measured)
+Training_Time,Stage_Train_Time_hours,Pretrained,3.8,3.68,20 Epochs (measured total machine time)
+Training_Time,Full_Train_Time_hours,32-35,N/A,N/A,Theoretical 150 epochs
+Robustness,Failure_Rate,0.00%,0.09%,0.00%,100% successful output
+Robustness,Invalid_Candidates_Count,0,10,0,Search boundary fallbacks

@@ -1,0 +1,43 @@
+{
+  "protocol": "measurement-m2",
+  "sample_count": 1105,
+  "success_count": 1105,
+  "failure_count": 0,
+  "failure_rate": 0.0,
+  "total_invalid_candidates": 0,
+  "total_fallbacks": 0,
+  "alignment_metrics": {
+    "psnr": {
+      "easy": 29.868907928466797,
+      "moderate": 24.830169677734375,
+      "hard": 20.407699584960938,
+      "average": 24.570520401000977
+    },
+    "ssim": {
+      "easy": 0.9255455732345581,
+      "moderate": 0.841960608959198,
+      "hard": 0.6599026322364807,
+      "average": 0.7941750288009644
+    }
+  },
+  "geometric_metrics_mean": {
+    "ref_folding_ratio": 0.0,
+    "tgt_folding_ratio": 0.0,
+    "mean_folding_ratio": 0.0,
+    "ref_degenerate_ratio": 0.0,
+    "tgt_degenerate_ratio": 0.0,
+    "ref_avg_stretch": 0.06711295535661516,
+    "tgt_avg_stretch": 0.06262978104984059,
+    "ref_max_stretch": 0.2367113629077894,
+    "tgt_max_stretch": 0.21034271566037138,
+    "ref_scale_variation": 0.11337286605756747,
+    "tgt_scale_variation": 0.09876621409795538,
+    "ref_bending_degree": 0.020237607424193782,
+    "tgt_bending_degree": 0.018794562393689856,
+    "effective_coverage": 0.8892923566084807
+  },
+  "timing_mean": {
+    "t_fixed_single_s": 0.12867566958299997,
+    "t_search_total_s": 1.29115957704605
+  }
+}

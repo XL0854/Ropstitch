@@ -1,0 +1,42 @@
+nohup: ignoring input
+odict_keys(['input1', 'input2'])
+/root/miniconda3/envs/ropstitch/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda3/envs/ropstitch/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loaded homo net model from /workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth!
+Loaded M2 checkpoint from /workspace/python_pro/test1/RopStitch/wCoefNet/model_m2/epoch020_m2_model.pth!
+################## Start M2 Testing #######################
+[ WARN:0@3.125] global loadsave.cpp:1089 imwrite_ Unsupported depth image for selected encoder is fallbacked to CV_8U.
+i = 50, best alpha = 0.5926, best_ssim: 0.8919, best_psnr: 26.96
+i = 100, best alpha = 0.1975, best_ssim: 0.9714, best_psnr: 34.52
+i = 150, best alpha = 1.1358, best_ssim: 0.7799, best_psnr: 21.94
+i = 200, best alpha = 0.4074, best_ssim: 0.7686, best_psnr: 21.94
+i = 250, best alpha = 0.2593, best_ssim: 0.8057, best_psnr: 24.63
+i = 300, best alpha = -0.5062, best_ssim: 0.6637, best_psnr: 17.36
+i = 350, best alpha = 0.4938, best_ssim: 0.7850, best_psnr: 21.19
+i = 400, best alpha = 0.0617, best_ssim: 0.6908, best_psnr: 20.01
+i = 450, best alpha = 0.3333, best_ssim: 0.6269, best_psnr: 17.23
+i = 500, best alpha = 1.2593, best_ssim: 0.8431, best_psnr: 26.50
+i = 550, best alpha = 0.0370, best_ssim: 0.9043, best_psnr: 28.25
+i = 600, best alpha = 1.5556, best_ssim: 0.7801, best_psnr: 23.92
+i = 650, best alpha = -0.0370, best_ssim: 0.7661, best_psnr: 22.78
+i = 700, best alpha = 0.5926, best_ssim: 0.9473, best_psnr: 30.65
+i = 750, best alpha = -0.0370, best_ssim: 0.8975, best_psnr: 25.42
+i = 800, best alpha = 0.7407, best_ssim: 0.7838, best_psnr: 26.18
+i = 850, best alpha = 0.8889, best_ssim: 0.8245, best_psnr: 22.64
+i = 900, best alpha = 0.4938, best_ssim: 0.8169, best_psnr: 25.64
+i = 950, best alpha = 1.8025, best_ssim: 0.6328, best_psnr: 21.05
+i = 1000, best alpha = -0.7037, best_ssim: 0.5531, best_psnr: 16.39
+i = 1050, best alpha = -0.1111, best_ssim: 0.6990, best_psnr: 18.30
+i = 1100, best alpha = 0.2593, best_ssim: 0.4447, best_psnr: 16.28
+i = 1105, best alpha = 0.4938, best_ssim: 0.8498, best_psnr: 24.95
+top 30% 29.86891
+top 30~60% 24.83017
+top 60~100% 20.40770
+average psnr: 24.570520
+top 30% 0.9255456
+top 30~60% 0.8419606
+top 60~100% 0.6599026
+average ssim: 0.79417503
+################## End M2 Testing #######################
