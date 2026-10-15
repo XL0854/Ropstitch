@@ -128,7 +128,8 @@ def forward_m2_full(net, coef_net, feedback_corrector, input1, input2, alpha=0.5
 
 def train_m2(args):
     os.environ['CUDA_DEVICES_ORDER'] = "PCI_BUS_ID"
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    if 'CUDA_VISIBLE_DEVICES' not in os.environ:
+        os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
 
     train_data = TrainDataset(data_path=args.train_path)
     train_loader = DataLoader(dataset=train_data, batch_size=args.batch_size, num_workers=2, shuffle=True, drop_last=True)
