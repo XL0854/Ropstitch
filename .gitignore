@@ -29,8 +29,4 @@ ave_fusion/
 ave_fusion_m2/
 ave_other_fusion/
 
-# M3 work-in-progress (uncommitted to M2)
-wCoefNet/Codes/train_m3.py
-wCoefNet/Codes/test_m3.py
-wCoefNet/Codes/tapr_refiner.py
-wCoefNet/Codes/loss_m3.py
+
