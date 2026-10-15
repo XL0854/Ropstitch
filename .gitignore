@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Datasets
+data/
+
+# Checkpoints and models
+*.pth
+*.pt
+model_*/
+woCoefNet/model_homo/
+wCoefNet/model_coef/
+wCoefNet/model_m1/
+wCoefNet/model_m2/
+wCoefNet/model_m3/
+
+# Logs and tensorboard
+*.log
+*.out
+summary_*/
+wCoefNet/summary_*/
+events.out.tfevents*
+
+# Results and temp outputs
+ave_fusion/
+ave_fusion_m2/
+ave_other_fusion/
+
+# M3 work-in-progress (uncommitted to M2)
+wCoefNet/Codes/train_m3.py
+wCoefNet/Codes/test_m3.py
+wCoefNet/Codes/tapr_refiner.py
+wCoefNet/Codes/loss_m3.py
