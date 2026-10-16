@@ -193,3 +193,65 @@ def ternary_search_b(net, coef_net, cross_matcher, conv_head_ref, conv_head_tgt,
             high = mid2
 
     return best_alpha, best_ssim, best_psnr, best_img
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Evaluate Combo B (Cross-Attention + ConvMeshHead)")
+    parser.add_argument('--gpu', type=str, default='0')
+    parser.add_argument('--ckpt_path', type=str, default='/workspace/python_pro/test1/RopStitch/M4/model_b/epoch005_combob_model.pth')
+    parser.add_argument('--woCoefNet_path', type=str, default='/workspace/python_pro/test1/RopStitch/woCoefNet/model_homo/epoch100_model.pth')
+    parser.add_argument('--test_path', type=str, default='/workspace/python_pro/test1/RopStitch/data/UDIS-D/testing/')
+    parser.add_argument('--num_samples', type=int, default=50)
+    parser.add_argument('--alpha', type=float, default=0.5)
+    parser.add_argument('--ternary', action='store_true', help="Use ternary search for optimal alpha")
+    args = parser.parse_args()
+
+    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+    net = Network().to(device).eval()
+    homo_checkpoint = torch.load(args.woCoefNet_path, map_location=device)
+    net.load_state_dict(homo_checkpoint['model'])
+
+    coef_net = CoefNetwork().to(device).eval()
+    cross_matcher = CrossAttentionMatcher(in_channels=128).to(device).eval()
+    conv_head_ref = ConvMeshHead(in_channels=128).to(device).eval()
+    conv_head_tgt = ConvMeshHead(in_channels=128).to(device).eval()
+
+    if os.path.exists(args.ckpt_path):
+        ckpt = torch.load(args.ckpt_path, map_location=device)
+        cross_matcher.load_state_dict(ckpt['cross_matcher'])
+        conv_head_ref.load_state_dict(ckpt['conv_head_ref'])
+        conv_head_tgt.load_state_dict(ckpt['conv_head_tgt'])
+        coef_net.load_state_dict(ckpt['coef_net'])
+        net.active_resnet_backbone.load_state_dict(ckpt['active_backbone'])
+        print(f"Successfully loaded Combo B checkpoint from {args.ckpt_path}")
+    else:
+        print(f"Warning: checkpoint not found at {args.ckpt_path}")
+
+    test_data = TestDataset(data_path=args.test_path)
+    test_loader = DataLoader(dataset=test_data, batch_size=1, shuffle=False)
+    eval_count = min(args.num_samples, len(test_loader)) if args.num_samples > 0 else len(test_loader)
+
+    psnr_list, ssim_list = [], []
+    for idx, batch in enumerate(test_loader):
+        if idx >= eval_count:
+            break
+        in1 = batch[0].float().to(device)
+        in2 = batch[1].float().to(device)
+
+        if args.ternary:
+            _, ssim, psnr, _ = ternary_search_b(net, coef_net, cross_matcher, conv_head_ref, conv_head_tgt, in1, in2, max_iter=3)
+        else:
+            ssim, psnr, _, _ = test_once_b(net, coef_net, cross_matcher, conv_head_ref, conv_head_tgt, in1, in2, alpha=args.alpha)
+
+        psnr_list.append(psnr)
+        ssim_list.append(ssim)
+        if (idx + 1) % 10 == 0 or (idx + 1) == eval_count:
+            print(f"[{idx+1:03d}/{eval_count:03d}] Avg PSNR: {np.mean(psnr_list):.3f} dB | Avg SSIM: {np.mean(ssim_list):.4f}")
+
+    print("=" * 60)
+    print(f"Test Complete on {len(psnr_list)} pairs.")
+    print(f"Final PSNR: {np.mean(psnr_list):.4f} dB | Final SSIM: {np.mean(ssim_list):.4f}")
+    print("=" * 60)
+
